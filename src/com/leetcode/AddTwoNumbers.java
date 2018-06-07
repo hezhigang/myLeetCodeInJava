@@ -55,14 +55,14 @@ public class AddTwoNumbers {
     	int sum = 0;
     	boolean b = false;
 		while (node1 != null || node2!=null) {
-			System.out.println("--------------------");
-			if (node1!=null) {
-				System.out.println(node1.val);
-			}
-			if (node2 != null) {
-				System.out.println(node2.val);
-			}
-			System.out.println("--------------------");
+//			System.out.println("--------------------");
+//			if (node1!=null) {
+//				System.out.println(node1.val);
+//			}
+//			if (node2 != null) {
+//				System.out.println(node2.val);
+//			}
+//			System.out.println("--------------------");
 			node = new ListNode(0);
 			sum = (node1!=null?node1.val:0) + (node2!=null?node2.val:0);
 			if (b) sum++;
@@ -84,8 +84,17 @@ public class AddTwoNumbers {
 //			ListNode node3 = new ListNode(1);
 //			node.next = node3;
 		}
-		
-        return reverse(node);
+    	ListNode prev = null;
+    	ListNode current = node;
+    	ListNode next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        node = prev;
+        return node;
     }
     
     /* Function to reverse the linked list */
