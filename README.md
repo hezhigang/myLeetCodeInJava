@@ -6,6 +6,7 @@ LeetCode exercise
 1. Two Sum
 2. Add Two Numbers
 3. _Longest Substring Without Repeating Characters_
+7. Reverse Integer
 
 # Database
 
