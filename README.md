@@ -10,6 +10,7 @@ LeetCode exercise
 ## Medium
 - 2 - Add Two Numbers
 
+-------------------------------------------------------------------------------
 
 # Database
 
@@ -23,6 +24,7 @@ LeetCode exercise
 ## Medium
 - 177 - Nth Highest Salary
 - 178 - Rank Scores
+- 180 - Consecutive Numbers
 - 184 - Department Highest Salary
 
 ## Hard
