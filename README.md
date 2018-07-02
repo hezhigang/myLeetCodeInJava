@@ -21,6 +21,7 @@ LeetCode exercise
 - 182 - Duplicate Emails
 - 183 - Customers Who Never Order
 - 196 - Delete Duplicate Emails
+- 197 - Rising Temperature
 
 ## Medium
 - 177 - Nth Highest Salary
