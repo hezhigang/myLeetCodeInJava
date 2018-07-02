@@ -20,6 +20,7 @@ LeetCode exercise
 - 181 - Employees Earning More Than Their Managers
 - 182 - Duplicate Emails
 - 183 - Customers Who Never Order
+- 196 - Delete Duplicate Emails
 
 ## Medium
 - 177 - Nth Highest Salary
