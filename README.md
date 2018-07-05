@@ -31,3 +31,4 @@ LeetCode exercise
 
 ## Hard
 - 185 - Department Top Three Salaries
+- 262 - Trips and Users
