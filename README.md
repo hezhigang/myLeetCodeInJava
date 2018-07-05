@@ -22,6 +22,8 @@ LeetCode exercise
 - 183 - Customers Who Never Order
 - 196 - Delete Duplicate Emails
 - 197 - Rising Temperature
+- 595 - Big Countries
+- 596 - Classes More Than 5 Students
 
 ## Medium
 - 177 - Nth Highest Salary
