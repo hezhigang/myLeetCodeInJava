@@ -25,12 +25,14 @@ LeetCode exercise
 - 595 - Big Countries
 - 596 - Classes More Than 5 Students
 - 620 - Not Boring Movies
+- 627 - Swap Salary
 
 ## Medium
 - 177 - Nth Highest Salary
 - 178 - Rank Scores
 - 180 - Consecutive Numbers
 - 184 - Department Highest Salary
+- 626 - Exchange Seats
 
 ## Hard
 - 185 - Department Top Three Salaries
