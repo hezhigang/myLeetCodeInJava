@@ -24,6 +24,7 @@ LeetCode exercise
 - 197 - Rising Temperature
 - 595 - Big Countries
 - 596 - Classes More Than 5 Students
+- 620 - Not Boring Movies
 
 ## Medium
 - 177 - Nth Highest Salary
