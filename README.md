@@ -44,3 +44,4 @@ LeetCode exercise
 # Shell
 - 195 - Tenth Line
 - 193 - Valid Phone Numbers
+- 192 - Word Frequency
