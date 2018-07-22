@@ -5,6 +5,8 @@
  */
 package com.leetcode;
 
+import java.util.LinkedHashMap;
+
 /**
  * Given a string, find the length of the longest substring without repeating characters.
 Examples:
@@ -22,13 +24,46 @@ public class LongestSubstr {
 		String s2 = "bbbbb";
 		String s3 = "pwwkew";
 		String s4 = "ABDEFGABEF";
-//		int len1 = lengthOfLongestSubstring(s1);
-//		System.out.println("s1="+s1+" ,len1="+len1);
-		t(s4);
+		int len1 = lengthOfLongestSubstring(s1);
+		int len2 = lengthOfLongestSubstring(s2);
+		int len3 = lengthOfLongestSubstring(s3);
+		int len4 = lengthOfLongestSubstring(s4);
+		System.out.println("s1="+s1+" ,len1="+len1);
+		System.out.println("s2="+s2+" ,len2="+len2);
+		System.out.println("s3="+s3+" ,len3="+len3);
+		System.out.println("s4="+s4+" ,len4="+len4);
+//		t(s4);
 	}
 	
+	/**
+	 * How To Find Longest Substring Without Repeating Characters In Java?
+	 * https://javaconceptoftheday.com/find-longest-substring-without-repeating-characters-java/
+	 * @param s
+	 * @return
+	 */
     public static int lengthOfLongestSubstring(String s) {
-        return 0;
+    	String longestSubstring = null;
+    	int maxUniqSubstrLen = 0;
+    	if (!s.isEmpty()) {
+        	LinkedHashMap<Character,Integer> map = new LinkedHashMap<Character,Integer>();
+        	int len = s.length();
+        	for(int i=0;i<len;i++) {
+        		char ch = s.charAt(i);
+        		if (!map.containsKey(ch)) {
+        			map.put(ch, i);
+        		}
+        		else {
+        			i = map.get(ch);  //key point
+        			map.clear();
+        		}
+        		if (map.size()>maxUniqSubstrLen) {
+        			maxUniqSubstrLen = map.size();
+        			longestSubstring = map.keySet().toString();
+        		}
+        	}    		
+    	}
+    	System.out.println("Longest Substring Without Repeating Characters->:"+longestSubstring);
+        return maxUniqSubstrLen;
     }
     
     public static void t(String s) {
