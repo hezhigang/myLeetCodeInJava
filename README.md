@@ -6,6 +6,7 @@ LeetCode exercise
 ## Easy
 - 1 - Two Sum
 - 7 - Reverse Integer
+- 9 - Palindrome Number
 
 ## Medium
 - 2 - Add Two Numbers
