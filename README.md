@@ -12,6 +12,10 @@ LeetCode exercise
 - 2 - Add Two Numbers
 - 3 - Longest Substring Without Repeating Characters
 
+## Hard
+
+- 146 - LRU Cache
+
 -------------------------------------------------------------------------------
 
 # Database
