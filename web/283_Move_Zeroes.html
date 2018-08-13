@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>283. Move Zeroes</title>
+<script type="text/javascript">
+  //var nums = [0,1,0,3,12];
+  var nums = [0,0,1];
+  console.log(nums.join(","));
+  for(i=nums.length-1;i>=0;i--) {
+	  if (nums[i]==0) {
+	  //console.log(i);
+		  for(j=i+1;j<nums.length;j++) {
+		    nums[j-1]=nums[j];
+		  }
+		  nums[nums.length-1]=0;
+	  }
+  }
+  console.log(nums.join(","));
+</script>
+</head>
+<body>
+
+</body>
+</html>
