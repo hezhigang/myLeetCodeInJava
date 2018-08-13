@@ -7,6 +7,7 @@ LeetCode exercise
 - 1 - Two Sum
 - 7 - Reverse Integer
 - 9 - Palindrome Number
+- 283 - Move Zeroes
 
 ## Medium
 - 2 - Add Two Numbers
