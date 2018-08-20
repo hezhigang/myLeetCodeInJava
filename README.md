@@ -12,6 +12,7 @@ LeetCode exercise
 ## Medium
 - 2 - Add Two Numbers
 - 3 - Longest Substring Without Repeating Characters
+- 300 - Longest Increasing Subsequence
 
 ## Hard
 
