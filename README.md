@@ -8,6 +8,7 @@ LeetCode exercise
 - 7 - Reverse Integer
 - 9 - Palindrome Number
 - 283 - Move Zeroes
+- 344 - Reverse String
 
 ## Medium
 - 2 - Add Two Numbers
