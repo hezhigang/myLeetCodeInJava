@@ -41,10 +41,11 @@ public class ReverseString {
     	String r = "";
         if (s!=null && !s.isEmpty()) {
         	char[] arr = s.toCharArray();
-            for (int i = 0; i < arr.length / 2; i++) {
-                char temp = arr[i];
-                arr[i] = arr[arr.length - 1 - i];
-                arr[arr.length - 1 - i] = temp;
+        	char temp = ' ';
+            for (int i=0; i<arr.length/2; i++) {
+                temp = arr[i];
+                arr[i] = arr[arr.length-1-i];
+                arr[arr.length-1-i] = temp;
             }
             r = new String(arr);
         }
