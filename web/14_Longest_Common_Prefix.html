@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>14. Longest Common Prefix</title>
+<script type="text/javascript">
+  var strs = ["flower","flow","flight"];
+  //var strs = ["dog","racecar","car"];
+  //var strs = ["aca","cba"];
+  //var strs = ["a"];
+  var minLen = strs[0].length;
+  var idx = 0;
+  for(var i=1;i<strs.length;i++) {
+    if (strs[i].length<minLen) {
+	  minLen = strs[i].length;
+	  idx = i;
+	}
+  }
+  console.log("idx="+idx);
+  console.log("min len of strs="+minLen);
+  
+  var lcp = "";
+  var ch = strs[idx].charAt(0);
+  var b = true;
+  for(var i=0;i<strs.length;i++) {
+	  b = b && strs[i].charAt(0)==ch?true:false;
+  }
+  if (b) {
+	  lcp+=ch;
+	  for(var j=1;j<minLen;j++) {
+		    ch = strs[idx].charAt(j);
+			b = true;
+		    for(var i=0;i<strs.length;i++) {
+			    b = b && (strs[i].charAt(j)==ch?true:false);
+			}
+			if (b)
+			  lcp += ch;
+			//else
+				//break;
+		  }	  
+  }
+  console.log("lcp="+lcp);
+</script>
+</head>
+<body>
+<h1>14. Longest Common Prefix</h1>
+<hr/>
+<a href="https://leetcode.com/problems/longest-common-prefix/description/">14. Longest Common Prefix</a>
+</body>
+</html>
