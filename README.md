@@ -9,6 +9,7 @@ LeetCode exercise
 - 9 - Palindrome Number
 - 283 - Move Zeroes
 - 344 - Reverse String
+- 14 - Longest Common Prefix
 
 ## Medium
 - 2 - Add Two Numbers
