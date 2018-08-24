@@ -10,6 +10,7 @@ LeetCode exercise
 - 283 - Move Zeroes
 - 344 - Reverse String
 - 14 - Longest Common Prefix
+- 204 - Count Primes
 
 ## Medium
 - 2 - Add Two Numbers
