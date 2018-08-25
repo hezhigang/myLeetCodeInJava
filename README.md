@@ -11,6 +11,7 @@ LeetCode exercise
 - 344 - Reverse String
 - 14 - Longest Common Prefix
 - 204 - Count Primes
+- 371 - Sum of Two Integers
 
 ## Medium
 - 2 - Add Two Numbers
