@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>371. Sum of Two Integers</title>
+<script type="text/javascript">
+  function getSum(a, b) {
+	  while(b!=0) {
+		  var carry=a&b;
+		  a = a^b;
+		  b = carry<<1;
+	  }
+	  return a;
+  }
+  
+  function getSum2(a, b) {
+	  var sum,carry;
+	  if (b==0) return a;
+	  sum = a^b;
+	  carry = (a&b)<<1;
+	  return getSum2(sum,carry);
+  }
+  
+  var a=1;
+  var b=2;
+  var c=getSum(a,b);
+  var d=getSum2(a,b);
+  console.log(a+"+"+b+"="+c);
+  console.log(a+"+"+b+"="+d);
+</script>
+</head>
+<body>
+<h1>371. Sum of Two Integers</h1>
+<hr/>
+<p>
+Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.
+</p>
+</body>
+</html>
