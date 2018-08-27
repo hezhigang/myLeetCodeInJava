@@ -5,6 +5,10 @@
  */
 package com.leetcode;
 
+import java.util.BitSet;
+import java.util.IntSummaryStatistics;
+import java.util.stream.IntStream;
+
 /**
  * 204. Count Primes
  * http://rosettacode.org/wiki/Primality_by_trial_division#Java
@@ -32,7 +36,27 @@ public class CountPrimes {
         		x++;
         }
         return x;
-    }	
+    }
+    
+    /**
+     * Java 8 Sieve of Eratosthenes
+     * https://neilmadden.wordpress.com/2014/01/30/java-8-sieve-of-eratosthenes/
+     * @param n
+     * @return
+     */
+    public static int countPrimes2(int n) {
+    	final BitSet sieve = new BitSet(n);
+    	final IntSummaryStatistics stats = IntStream.rangeClosed(2, n-1)
+    	                  .filter(x -> !sieve.get(x))
+    	                  .peek(x -> {
+    	                      if (x*x < n)
+    	                        for(int i = x; i < n; i+=x)
+    	                           sieve.set(i);
+    	                   })
+    	                  .summaryStatistics();
+    	System.out.printf("%d %d%n", stats.getCount(), stats.getSum());
+    	return new Long(stats.getCount()).intValue();
+    }
 
 	/**
 	 * @param args
@@ -46,7 +70,9 @@ public class CountPrimes {
 //		int n = 100;
 		int n = 999983;
 		int i = countPrimes(n);
+		int i2 = countPrimes2(n);
 		System.out.println("counts of primes less than "+ n + " is: "+i);
+		System.out.println("counts of primes less than "+ n + " is: "+i2);
 	}
 
 }
