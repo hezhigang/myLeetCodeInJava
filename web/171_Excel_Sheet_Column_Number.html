@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>171. Excel Sheet Column Number</title>
+<script type="text/javascript">
+  function titleToNumber(s) {
+	  var n = 0;
+	  var len = s.length;
+	  for(var i=s.length-1;i>=0;i--) {
+		  n+=(s.charCodeAt(i)-64)*Math.pow(26,len-i-1);
+	  }
+	  return n;
+  }  
+
+  //var s = "A";
+  //var s = "AB";
+  var s = "ZY";
+  //var s = "AZ";
+  for(var i=0;i<s.length;i++) {
+	  console.log(s.charAt(i)+"->"+s.charCodeAt(i));
+  }
+  console.log(s+"->"+titleToNumber(s))
+</script>
+</head>
+<body>
+<a href="https://leetcode.com/problems/excel-sheet-column-number/description/">171. Excel Sheet Column Number</a>
+<hr/>
+<p>
+A -> 1 <br>
+B -> 2 <br>
+C -> 3 <br>
+... <br>
+Z -> 26 <br>
+AA -> 27 <br>
+AB -> 28 <br>
+... <br>
+</p>
+</body>
+</html>
