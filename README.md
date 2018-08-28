@@ -12,6 +12,7 @@ LeetCode exercise
 - 14 - Longest Common Prefix
 - 204 - Count Primes
 - 371 - Sum of Two Integers
+- 171 - Excel Sheet Column Number
 
 ## Medium
 - 2 - Add Two Numbers
