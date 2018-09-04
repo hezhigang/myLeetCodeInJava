@@ -13,6 +13,7 @@ LeetCode exercise
 - 204 - Count Primes
 - 371 - Sum of Two Integers
 - 171 - Excel Sheet Column Number
+- 118 - Pascal's Triangle
 
 ## Medium
 - 2 - Add Two Numbers
