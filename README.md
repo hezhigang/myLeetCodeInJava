@@ -14,6 +14,7 @@ LeetCode exercise
 - 371 - Sum of Two Integers
 - 171 - Excel Sheet Column Number
 - 118 - Pascal's Triangle
+- 119 - Pascal's Triangle II
 
 ## Medium
 - 2 - Add Two Numbers
