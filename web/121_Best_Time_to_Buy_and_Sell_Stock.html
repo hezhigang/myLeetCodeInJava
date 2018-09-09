@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>121. Best Time to Buy and Sell Stock</title>
+<script type="text/javascript">
+  function maxProfit(prices) {
+	if (prices==null || prices.length==0)
+		return 0;
+	var r=0;
+	var x = 0;
+	for(var i=0;i<prices.length-1;i++) {
+		for(var j=prices.length-1;j>i;j--) {
+			x = prices[j]-prices[i];
+			if (x>r)
+				r = x;
+		}
+	}
+	return r;
+  }
+  
+  //var arr = [7,1,5,3,6,4];
+  //var arr = [7,6,4,3,1];
+  //var arr = [3,2,6,5,0,3];
+  var arr = [2,4,1];
+  console.log( maxProfit(arr) );
+</script>
+</head>
+<body>
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/">121. Best Time to Buy and Sell Stock</a>
+<hr/>
+</body>
+</html>
