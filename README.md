@@ -15,6 +15,7 @@ LeetCode exercise
 - 171 - Excel Sheet Column Number
 - 118 - Pascal's Triangle
 - 119 - Pascal's Triangle II
+- 121 - Best Time to Buy and Sell Stock
 
 ## Medium
 - 2 - Add Two Numbers
