@@ -23,6 +23,24 @@ public class OptimizedStocks {
         	}
         }
         return r;
+    } 
+    
+    /**
+     * https://www.programcreek.com/2014/02/leetcode-best-time-to-buy-and-sell-stock-java/
+     * Instead of keeping track of largest element in the array, we track the maximum profit so far.
+     * @param prices
+     * @return
+     */
+    public static int maxProfit2(int[] prices) {
+    	if (prices==null || prices.length<=1)
+    		return 0;
+        int r = 0;
+        int minPrice = prices[0];
+        for(int i=1;i<prices.length;i++) {
+        	r = Math.max(r, prices[i]-minPrice);
+        	minPrice = Math.min(minPrice, prices[i]);
+        }
+        return r;
     }    
 
 	/**
@@ -32,9 +50,10 @@ public class OptimizedStocks {
 //		int[] arr = {};
 //		int[] arr = {7,1,5,3,6,4};
 //		int[] arr = {7,6,4,3,1};
-//		int[] arr = {2,4,1};
-		int[] arr = {3,2,6,5,0,3};
-		System.out.println( maxProfit(arr) );		
+		int[] arr = {2,4,1};
+//		int[] arr = {3,2,6,5,0,3};
+		System.out.println( maxProfit(arr) );
+		System.out.println( maxProfit2(arr) );
 	}
 
 	/**
