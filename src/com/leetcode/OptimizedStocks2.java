@@ -11,19 +11,31 @@ package com.leetcode;
  */
 public class OptimizedStocks2 {
 	
-    public int maxProfit(int[] prices) {
-    	int r = 0;
-    	
-        return r;
+	/**
+	 * 
+	 * @param prices
+	 * @return
+	 */
+    public static int maxProfit(int[] prices) {
+    	int profit = 0;
+    	int diff = 0;
+    	for(int i=1;i<prices.length;i++) {
+    		diff = prices[i]-prices[i-1];
+    			if (diff>0) {
+    				profit+=diff;
+    			}
+    	}
+        return profit;
     }	
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] arr = {7,1,5,3,6,4};
-		// int[] arr = {1,2,3,4,5};
-		// int[] arr = {7,6,4,3,1};
+//		int[] arr = {7,1,5,3,6,4};
+//		 int[] arr = {1,2,3,4,5};
+		 int[] arr = {7,6,4,3,1};
+		System.out.println( maxProfit(arr) );
 	}
 
 }
