@@ -16,6 +16,7 @@ LeetCode exercise
 - 118 - Pascal's Triangle
 - 119 - Pascal's Triangle II
 - 121 - Best Time to Buy and Sell Stock
+- 122 - Best Time to Buy and Sell Stock II
 
 ## Medium
 - 2 - Add Two Numbers
