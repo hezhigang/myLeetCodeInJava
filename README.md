@@ -22,6 +22,7 @@ LeetCode exercise
 - 2 - Add Two Numbers
 - 3 - Longest Substring Without Repeating Characters
 - 300 - Longest Increasing Subsequence
+- 227 - Basic Calculator II
 
 ## Hard
 
