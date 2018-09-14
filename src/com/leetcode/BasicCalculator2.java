@@ -106,7 +106,7 @@ public class BasicCalculator2 {
 		Stack<String> stk = new Stack<String>();
 //		char[] arr = infixExpr.toCharArray();
 		List<String> list = new ArrayList<String>();
-		StringTokenizer st = new StringTokenizer(infixExpr,"[\\+\\-\\*/]",true);
+		StringTokenizer st = new StringTokenizer(infixExpr,"[\\+\\-\\*/()]",true);
 	     while (st.hasMoreTokens()) {
 	         list.add(st.nextToken());
 	     }
@@ -160,19 +160,19 @@ public class BasicCalculator2 {
 //		String s = " 3+5 / 2 ";
 		String s = "1*2-3/4+5*6-7*8+9/10";
 //		String s = "(1+(4+5+2)-3)+(6+8)";
-//		parse3(s);
-		System.out.println( s + " = " + calculate(s) );
+		parse3(s);
+//		System.out.println( s + " = " + calculate(s) );
 	}
 	
 	public static void parse(String s) {
 //		String s = "1*2-3/4+5*6-7*8+9/10";
-		String[] arr = s.split("[\\+\\-\\*/]");
+		String[] arr = s.split("[\\+\\-\\*/()]");
 		for(int i=0;i<arr.length;i++)
 			System.out.println(arr[i]);
 	}
 	
 	public static void parse2(String s) {
-		Pattern pattern = Pattern.compile("[\\+\\-\\*/]");
+		Pattern pattern = Pattern.compile("[\\+\\-\\*/()]");
 		Matcher matcher = pattern.matcher(s);
 
 		for (int i = 1; matcher.find(); i++)
@@ -180,7 +180,7 @@ public class BasicCalculator2 {
 	}
 	
 	public static void parse3(String s) {
-		StringTokenizer st = new StringTokenizer(s,"[\\+\\-\\*/]",true);
+		StringTokenizer st = new StringTokenizer(s,"[\\+\\-\\*/()]",true);
 		System.out.println(st.countTokens());
 	     while (st.hasMoreTokens()) {
 	         System.out.println(st.nextToken());
