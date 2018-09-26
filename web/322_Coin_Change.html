@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>322. Coin Change</title>
+<script type="text/javascript">
+
+function coinChange(coins, amount) {
+	if (amount==0) return 0;
+	
+	var n=-1;
+	var MC = new Array(amount+1);
+	MC[0]=0;
+	for(var i=1;i<=amount;i++)
+		MC[i]=Number.MAX_VALUE;
+	
+	for(var i=1;i<=amount;i++) {
+		for(var j=0;j<coins.length;j++) {
+			if (i>=coins[j]) {
+				var cc = MC[i-coins[j]];
+				if (cc!=Number.MAX_VALUE && (cc+1<MC[i]))
+					MC[i] = cc+1;
+			}
+		}
+	}
+	n = MC[amount];
+	
+	if (n==Number.MIN_VALUE || n==Number.MAX_VALUE || n==0) n = -1;
+	
+	return n;
+}
+
+//var coins = [1, 2, 5], amount = 11;
+//var coins = [2], amount = 3;
+//var coins = [2], amount = 1;
+var coins = [1,2,5], amount=100;
+//var coins=[1],amount=0;
+var n =  coinChange(coins,amount);
+console.log("the fewest number of coins of "+coins.join(",")+" for change "+amount+"="+n);
+</script>
+</head>
+<body>
+<h1>322. Coin Change</h1>
+<hr/>
+<a href="https://leetcode.com/problems/coin-change/description/">322. Coin Change</a>
+</body>
+</html>
