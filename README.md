@@ -23,6 +23,7 @@ LeetCode exercise
 - 3 - Longest Substring Without Repeating Characters
 - 300 - Longest Increasing Subsequence
 - 227 - Basic Calculator II
+- 322 - Coin Change
 
 ## Hard
 
