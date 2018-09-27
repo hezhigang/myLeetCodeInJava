@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>518. Coin Change 2</title>
+<script type="text/javascript">
+function change(amount, coins) {
+	var dp = new Array(amount+1);
+	for(var i=0;i<dp.length;i++)
+		dp[i]=0;
+	dp[0]=1;
+	for(var i=0;i<amount;i++)
+		for(var j=coins[i];j<=amount;++j)
+			dp[j]+=dp[j-coins[i]];
+	return dp[amount];
+}
+
+//var amount=5;
+//var coins=[1,2,5];
+
+//var amount=3;
+//var coins=[2];
+
+//var amount=10;
+//var coins=[10];
+
+//var amount=4;
+//var coins=[1,2,3];
+
+//var amount=10;
+//var coins=[2, 5, 3, 6];
+
+var amount=500;
+var coins=[3,5,7,8,9,10,11];
+
+var cc = change(amount,coins);
+console.log("the number of combinations for "+amount+" by coins "+coins.join(",")+"="+cc);
+</script>
+</head>
+<body>
+<h1>518. Coin Change 2</h1>
+<hr>
+<a href="https://leetcode.com/problems/coin-change-2/description/">518. Coin Change 2</a>
+</body>
+</html>
