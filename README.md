@@ -24,6 +24,7 @@ LeetCode exercise
 - 300 - Longest Increasing Subsequence
 - 227 - Basic Calculator II
 - 322 - Coin Change
+- 518 - Coin Change 2
 
 ## Hard
 
