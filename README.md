@@ -25,6 +25,8 @@ LeetCode exercise
 - 227 - Basic Calculator II
 - 322 - Coin Change
 - 518 - Coin Change 2
+- 105 - Construct Binary Tree from Preorder and Inorder Traversal
+- 106 - Construct Binary Tree from Inorder and Postorder Traversal
 
 ## Hard
 
