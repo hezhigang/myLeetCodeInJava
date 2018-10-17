@@ -13,6 +13,11 @@ import java.util.Stack;
  */
 public class ValidParentheses {
 	
+	/**
+	 * https://cheonhyangzhang.wordpress.com/2015/09/14/20-leetcode-java-valid-parentheses-easy/
+	 * @param s
+	 * @return
+	 */
     public static boolean isValid(String s) {
     	HashMap<Character, Character> pair = new HashMap<Character, Character>();
         pair.put(')','(');
@@ -86,6 +91,7 @@ public class ValidParentheses {
 		String s4 = "([)]";
 		String s5 = "{[]}";
 		String s6 = "{abc[123](xyz)}";
+		String s7 = "{123[456}abc]";
 		
 		System.out.println("Valid Parentheses of " + s1 + "="+ isValid(s1));
 		System.out.println("Valid Parentheses of " + s2 + "="+ isValid(s2));
@@ -95,6 +101,9 @@ public class ValidParentheses {
 		
 		System.out.println("Valid Parentheses of " + s6 + "="+ isValid(s6));
 		System.out.println("Valid Parentheses of " + s6 + "="+ isValid2(s6));
+		
+		System.out.println("Valid Parentheses of " + s7 + "="+ isValid(s7));
+		System.out.println("Valid Parentheses of " + s7 + "="+ isValid2(s7));		
 	}
 
 }
