@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>20. Valid Parentheses</title>
+<script type="text/javascript">
+function isValid(s) {
+	var pair = {'\}':'\{','\]':'\[',')':'('};
+	var stk = new Array();
+	var c = '';
+	for(var i=0;i<s.length;i++) {
+		c = s[i];
+		switch(c) {
+		case '{':
+		case '[':
+		case '(':
+			stk.push(c);
+		    break;
+		default:
+			if (stk.length==0 || pair[c]!=stk.pop()) {
+				return false;
+			}
+		}	
+	}
+	if (stk.length==0) return true;
+	return false;
+}
+
+var s1 = "()";
+var s2 = "()[]{}";
+var s3 = "(]";
+var s4 = "([)]";
+var s5 = "{[]}";
+var s6 = "{abc[123](xyz)}";
+var s7 = "{123[456}abc]";
+
+console.log("Valid Parentheses of " + s1 + "="+ isValid(s1));
+console.log("Valid Parentheses of " + s2 + "="+ isValid(s2));
+console.log("Valid Parentheses of " + s3 + "="+ isValid(s3));
+console.log("Valid Parentheses of " + s4 + "="+ isValid(s4));
+console.log("Valid Parentheses of " + s5 + "="+ isValid(s5));
+
+console.log("Valid Parentheses of " + s6 + "="+ isValid(s6));
+
+console.log("Valid Parentheses of " + s7 + "="+ isValid(s7));
+</script>
+</head>
+<body>
+<h1>20. Valid Parentheses</h1>
+<hr/>
+<a href="https://leetcode.com/problems/valid-parentheses/description/">20. Valid Parentheses</a>
+</body>
+</html>
