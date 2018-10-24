@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>387. First Unique Character in a String</title>
+<script type="text/javascript">
+function firstUniqChar(s) {
+	var count = {};
+	for(var i=0;i<s.length;i++) {
+		if (typeof count[s[i]]!="undefined" && count[s[i]]!=null) {
+			count[s[i]]++;
+		}
+		else {
+			count[s[i]]=1;
+		}
+	}
+	var r=-1;
+	for(var i=0;i<s.length;i++) {
+		if (count[s[i]]==1) {
+			r=i;
+			break;
+		}
+	}
+	return r;
+}
+
+//var s = "leetcode";
+var s = "loveleetcode";
+console.log("the first non-repeating character in "+s+"="+firstUniqChar(s));
+</script>
+</head>
+<body>
+<h1>387. First Unique Character in a String</h1>
+<hr/>
+<a href="https://leetcode.com/problems/first-unique-character-in-a-string/description/">387. First Unique Character in a String</a>
+</body>
+</html>
