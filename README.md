@@ -18,6 +18,7 @@ LeetCode exercise
 - 121 - Best Time to Buy and Sell Stock
 - 122 - Best Time to Buy and Sell Stock II
 - 20 - Valid Parentheses
+- 387 - First Unique Character in a String
 
 ## Medium
 - 2 - Add Two Numbers
