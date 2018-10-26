@@ -19,6 +19,7 @@ LeetCode exercise
 - 122 - Best Time to Buy and Sell Stock II
 - 20 - Valid Parentheses
 - 387 - First Unique Character in a String
+- 206 - Reverse Linked List
 
 ## Medium
 - 2 - Add Two Numbers
