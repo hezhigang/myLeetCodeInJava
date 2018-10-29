@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>190. Reverse Bits</title>
+<script type="text/javascript">
+//[leetcode]190. Reverse Bits -- JavaScript 代码
+//https://blog.csdn.net/u014328357/article/details/52382112
+// n = 10 ，11 返回结果不对，但LeetCode上却通过了，不懂？
+function reverseBits(n) {
+    var result = 0;
+    for (var i = 0; i < 32; ++i) {
+        result |= (n >> i & 0x1) << (31 - i); 
+    }
+    return result >>> 0;
+}
+
+/*
+function reverseBits(n) {
+	var result = 0;
+    var temp = 0;
+    for (var i = 0;i < 32;i++) {
+    	result = result*2;
+        if ((n&1)===1)
+        	result += 1;
+        n = n>>1;
+    }
+    return result;	
+}
+*/
+
+//var n = 10;
+//var n = 43261596;
+var n=11;
+
+console.log("reverseBits of "+n+"="+reverseBits(n));
+</script>
+</head>
+<body>
+<h1>190. Reverse Bits</h1>
+<hr/>
+<a href="https://leetcode.com/problems/reverse-bits/description/">190. Reverse Bits</a>
+</body>
+</html>
