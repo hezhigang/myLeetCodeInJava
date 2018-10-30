@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>155. Min Stack</title>
+<script type="text/javascript">
+function MinStack(stk,minStk) {
+	this.stk = [];
+	this.minStk = [];
+}
+
+/** 
+ * @param {number} x
+ * @return {void}
+ */
+MinStack.prototype.push = function(x) {
+    this.stk.push(x);
+    if (this.minStk.length==0 || this.minStk[this.minStk.length-1]>=x)
+    	this.minStk.push(x);
+};
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function() {
+    var x = this.stk.pop();
+    if (x==this.minStk[this.minStk.length-1])
+    	this.minStk.pop();
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.top = function() {
+    return this.stk[this.stk.length-1];
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.getMin = function() {
+    return this.minStk[this.minStk.length-1];
+};
+
+var minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+console.log(minStack.getMin());
+minStack.pop();
+console.log(minStack.top());
+console.log(minStack.getMin());
+</script>
+</head>
+<body>
+<h1>155. Min Stack</h1>
+<hr>
+<a href="https://leetcode.com/problems/min-stack/description/">155. Min Stack</a>
+</body>
+</html>
