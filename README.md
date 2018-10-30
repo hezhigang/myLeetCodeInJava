@@ -32,6 +32,7 @@ LeetCode exercise
 - 518 - Coin Change 2
 - 105 - Construct Binary Tree from Preorder and Inorder Traversal
 - 106 - Construct Binary Tree from Inorder and Postorder Traversal
+- 29 - Divide Two Integers
 
 ## Hard
 
