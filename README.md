@@ -21,6 +21,7 @@ LeetCode exercise
 - 387 - First Unique Character in a String
 - 206 - Reverse Linked List
 - 190 - Reverse Bits
+- 155 - Min Stack
 
 ## Medium
 - 2 - Add Two Numbers
