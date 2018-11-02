@@ -20,6 +20,7 @@ public class BinaryTreeLevelOrderTraversal {
     	List<List<Integer>> result = new ArrayList<List<Integer>>();
     	if (root==null) return result;
     	Map<Integer,List<Integer>> map = new TreeMap<Integer,List<Integer>>();
+//    	Map<Integer,List<Integer>> map = new ConcurrentSkipListMap<Integer,List<Integer>>();
 		updateMap(root,0,map);
 		
     	for(Map.Entry<Integer, List<Integer>> entry : map.entrySet()) {
