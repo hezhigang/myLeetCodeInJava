@@ -35,11 +35,13 @@ LeetCode exercise
 - 29 - Divide Two Integers
 - 94 - Binary Tree Inorder Traversal
 - 102 - Binary Tree Level Order Traversal
+- 144 - Binary Tree Preorder Traversal
 
 ## Hard
 
 - 146 - LRU Cache
 - 224 - Basic Calculator
+- 145 - Binary Tree Postorder Traversal
 
 -------------------------------------------------------------------------------
 
