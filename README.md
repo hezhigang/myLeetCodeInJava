@@ -34,6 +34,7 @@ LeetCode exercise
 - 106 - Construct Binary Tree from Inorder and Postorder Traversal
 - 29 - Divide Two Integers
 - 94 - Binary Tree Inorder Traversal
+- 102 - Binary Tree Level Order Traversal
 
 ## Hard
 
