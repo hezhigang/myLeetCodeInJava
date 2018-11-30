@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>217. Contains Duplicate</title>
+<script type="text/javascript">
+function containsDuplicate(nums) {
+	var r = false;
+	var count = {};
+	for(var i=0;i<nums.length;i++) {
+		if (typeof count[nums[i]]!="undefined" && count[nums[i]]!=null) {
+			count[nums[i]]++;
+		}
+		else {
+			count[nums[i]]=1;
+		}
+	}
+	for(var i in count) {
+		if (count[i]>1) {
+			r = true;
+			break;
+		}
+	}
+	return r;
+}
+
+var arr1 = [1,2,3,1];
+console.log(arr1.join(",")+"->"+containsDuplicate(arr1));
+var arr2 = [1,2,3,4];
+console.log(arr2.join(",")+"->"+containsDuplicate(arr2));
+var arr3 = [1,1,1,3,3,4,3,2,4,2];
+console.log(arr3.join(",")+"->"+containsDuplicate(arr3));
+</script>
+</head>
+<body>
+<h1>217. Contains Duplicate</h1>
+<a href="https://leetcode.com/problems/contains-duplicate/description/">217. Contains Duplicate</a>
+</body>
+</html>
