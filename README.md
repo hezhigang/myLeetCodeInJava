@@ -22,6 +22,7 @@ LeetCode exercise
 - 206 - Reverse Linked List
 - 190 - Reverse Bits
 - 155 - Min Stack
+- 217 - Contains Duplicate
 
 ## Medium
 - 2 - Add Two Numbers
