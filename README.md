@@ -23,6 +23,7 @@ LeetCode exercise
 - 190 - Reverse Bits
 - 155 - Min Stack
 - 217 - Contains Duplicate
+- 69 - Sqrt(x)
 
 ## Medium
 - 2 - Add Two Numbers
