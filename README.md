@@ -24,6 +24,7 @@ LeetCode exercise
 - 155 - Min Stack
 - 217 - Contains Duplicate
 - 69 - Sqrt(x)
+- 53 - Maximum Subarray
 
 ## Medium
 - 2 - Add Two Numbers
