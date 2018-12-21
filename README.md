@@ -25,6 +25,7 @@ LeetCode exercise
 - 217 - Contains Duplicate
 - 69 - Sqrt(x)
 - 53 - Maximum Subarray
+- 706 - Design HashMap
 
 ## Medium
 - 2 - Add Two Numbers
