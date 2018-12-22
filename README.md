@@ -41,6 +41,7 @@ LeetCode exercise
 - 102 - Binary Tree Level Order Traversal
 - 144 - Binary Tree Preorder Traversal
 - 98 - Validate Binary Search Tree
+- 384 - Shuffle an Array
 
 ## Hard
 
