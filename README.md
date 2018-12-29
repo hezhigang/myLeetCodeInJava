@@ -42,6 +42,7 @@ LeetCode exercise
 - 144 - Binary Tree Preorder Traversal
 - 98 - Validate Binary Search Tree
 - 384 - Shuffle an Array
+- 393 - UTF-8 Validation
 
 ## Hard
 
