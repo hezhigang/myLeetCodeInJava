@@ -5,9 +5,11 @@
  */
 package com.leetcode;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.TreeMap;
 
 /**
@@ -50,6 +52,33 @@ public class BinaryTreeLevelOrderTraversal {
     	updateMap(root.right,level,map);
     	return;
     }
+    
+    /**
+     * Ian Bravo Rabay
+     * https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/195895/Java-1ms-using-BFS
+     * @param root
+     * @param level
+     * @param map
+     */
+    public static List<List<Integer>> levelOrder2(TreeNode root) {
+    	List<List<Integer>> result = new ArrayList<List<Integer>>();
+    	if (root!=null) {
+    		Queue<TreeNode> queue = new ArrayDeque<TreeNode>();
+    		queue.add(root);
+    		while (!queue.isEmpty()) {
+    			int size = queue.size();
+    			List<Integer> nodesInLevel = new ArrayList<Integer>();
+    			for (int i = 0; i < size; i++) {
+    	            TreeNode curr = queue.poll();
+    	            nodesInLevel.add(curr.val);
+    	            if (curr.left != null) queue.add(curr.left);
+    	            if (curr.right != null) queue.add(curr.right);
+    	        }
+    	        result.add(nodesInLevel);    			
+    		}
+    	}
+    	return result;
+    }
 
 	/**
 	 * @param args
@@ -70,8 +99,10 @@ public class BinaryTreeLevelOrderTraversal {
 		rt.right = node2Right;
 		
 		List<List<Integer>> list = levelOrder(rt);
-		
 		list.forEach(System.out::println);
+		System.out.println();
+		List<List<Integer>> list2 = levelOrder2(rt);
+		list2.forEach(System.out::println);
 	}
 
 }
