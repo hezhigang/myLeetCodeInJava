@@ -26,6 +26,7 @@ LeetCode exercise
 - 69 - Sqrt(x)
 - 53 - Maximum Subarray
 - 706 - Design HashMap
+- 21 - Merge Two Sorted Lists
 
 ## Medium
 - 2 - Add Two Numbers
