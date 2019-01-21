@@ -27,6 +27,7 @@ LeetCode exercise
 - 53 - Maximum Subarray
 - 706 - Design HashMap
 - 21 - Merge Two Sorted Lists
+- 13 - Roman to Integer
 
 ## Medium
 - 2 - Add Two Numbers
