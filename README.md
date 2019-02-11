@@ -28,6 +28,7 @@ LeetCode exercise
 - 706 - Design HashMap
 - 21 - Merge Two Sorted Lists
 - 13 - Roman to Integer
+- 26 - Remove Duplicates from Sorted Array
 
 ## Medium
 - 2 - Add Two Numbers
