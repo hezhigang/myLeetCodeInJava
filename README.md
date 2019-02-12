@@ -29,6 +29,7 @@ LeetCode exercise
 - 21 - Merge Two Sorted Lists
 - 13 - Roman to Integer
 - 26 - Remove Duplicates from Sorted Array
+- 28 - Implement strStr()
 
 ## Medium
 - 2 - Add Two Numbers
