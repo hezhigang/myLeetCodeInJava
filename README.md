@@ -30,6 +30,7 @@ LeetCode exercise
 - 13 - Roman to Integer
 - 26 - Remove Duplicates from Sorted Array
 - 28 - Implement strStr()
+- 326 - Power of Three
 
 ## Medium
 - 2 - Add Two Numbers
