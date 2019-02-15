@@ -31,6 +31,7 @@ LeetCode exercise
 - 26 - Remove Duplicates from Sorted Array
 - 28 - Implement strStr()
 - 326 - Power of Three
+- 237 - Delete Node in a Linked List
 
 ## Medium
 - 2 - Add Two Numbers
