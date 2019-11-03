@@ -17,7 +17,7 @@ import java.util.stream.Stream;
  */
 public class SpiralMatrix {
 
-    public static List<Integer> spiralOrder(int[][] matrix) {
+    public static List<Integer> spiralOrder_my(int[][] matrix) {
         List<Integer> list = new ArrayList<Integer>();
         for(int i=0;i<matrix.length;i++) {
         	for (int j=0;j<matrix[i].length;j++) {
@@ -70,6 +70,50 @@ public class SpiralMatrix {
         }
         return list;
     }
+    
+    /**
+     * 顺时针螺旋矩阵
+     * 盘点今年秋招那些“送命”的算法面试题 - 极客大学 - InfoQ
+     * @param matrix
+     * @return
+     */
+	public static List<Integer> spiralOrder(int[][] matrix) {
+		/**
+		 * 核心思想是，由起点坐标、方向、位移可以定义矩阵中的唯一一条线段，
+		 * 并且可知当前路径下的所有坐标；
+		 * 而螺旋的过程可以抽象为访问多条首尾相连的线段
+		 * 我们可以根据初始起点坐标、方向、位移，螺旋得到矩阵中所有坐标。
+		 */
+		List<Integer> result = new ArrayList<>();
+		int height = matrix.length, width = height == 0 ? 0 : matrix[0].length;
+		int size = height * width;
+
+		int[] dirX = { 0, 1, 0, -1 };
+		int[] dirY = { 1, 0, -1, 0 };
+
+		// 初始化起点坐标:(0,-1) 方向:向右;
+		int x = 0, y = -1, dir = 0;
+		for (int step, total = 0; total < size; total += step) {
+
+			// 根据方向得到对应的位移, 并修正此后矩阵的参数(此后线段的长度)
+			if (dir == 0 || dir == 2) {
+				step = width;
+				height--;
+			} else {
+				step = height;
+				width--;
+			}
+			// 此前确定了起点坐标、方向和位移, 就可以得到当前线段的所有坐标,并输出到结果集;
+			for (int i = step; i > 0; i--) {
+				x += dirX[dir];
+				y += dirY[dir];
+				result.add(matrix[x][y]);
+			}
+			// 调整下一条线段方向
+			dir = ++dir % 4;
+		}
+		return result;
+	}    
 
 	/**
 	 * @param args
@@ -77,7 +121,7 @@ public class SpiralMatrix {
 	public static void main(String[] args) {
 		//int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-		//int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
+		int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
 		
 		//int[][] matrix = { {6,7} };
 		
@@ -102,7 +146,7 @@ public class SpiralMatrix {
 		
 		//int[][] matrix = { {8,1,6}, {3,5,7}, {4,9,2} };
 		
-		int[][] matrix = { {1,15,14,4}, {12,6,7,9}, {8,10,11,5}, {13,3,2,16} };
+		//int[][] matrix = { {1,15,14,4}, {12,6,7,9}, {8,10,11,5}, {13,3,2,16} };
 
 		System.out.println(Arrays.deepToString(matrix));
 
