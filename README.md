@@ -52,6 +52,7 @@ LeetCode exercise
 - 19 - Remove Nth Node From End of List
 - 215 - Kth Largest Element in an Array
 - 54 - Spiral Matrix
+- 49 - Group Anagrams
 
 ## Hard
 
