@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>49. Group Anagrams</title>
+<script type="text/javascript">
+	/** by Joan Indiana Lyness
+	https://medium.com/javascript-in-plain-english/algorithms-101-group-anagrams-in-javascript-b3e3c10d211e
+	 * @param {string[]} strs
+	 * @return {string[][]}
+	 */
+	function groupAnagrams(strs) {
+		var m = {};
+		 for(var i=0;i<strs.length;i++) {
+			 var s = strs[i];
+			 var c = s.split("").sort();
+			 console.log(c.join(",")+"->"+s);
+			 m[c]?m[c].push(s):m[c]=[s];
+		 }
+		var r = [];
+		var keys = Object.keys(m);
+		for(var k=0; k<keys.length; k++) {
+			console.log(m[keys[k]]);
+			r.push( m[keys[k]] );
+		}
+		return r;
+	}
+
+	function groupAnagrams_pass_leetcode_v1(strs) {
+		var hash = {};
+		 for(var e in strs) {
+			 var s = strs[e];
+			 //console.log(s);
+			 var arr = s.split("").sort();
+			 console.log(arr.join(",")+"->"+s);
+			 hash[arr]?hash[arr].push(s):hash[arr]=[s];
+		 }
+		var r = [];
+		var keys = Object.keys(hash);
+		for(var k in keys) {
+			console.log(hash[keys[k]]);
+			r.push( hash[keys[k]] );
+		}
+		return r;
+	}	
+
+	var strArr = ["eat", "tea", "tan", "ate", "nat", "bat"];
+	var r = groupAnagrams(strArr);
+	console.log(r.join(","));
+</script>
+</head>
+<body>
+<h1>49. Group Anagrams</h1>
+<a href="https://leetcode.com/problems/group-anagrams">49. Group Anagrams</a>
+</body>
+</html>
