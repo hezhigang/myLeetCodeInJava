@@ -53,6 +53,7 @@ LeetCode exercise
 - 215 - Kth Largest Element in an Array
 - 54 - Spiral Matrix
 - 49 - Group Anagrams
+- 46 - Permutations
 
 ## Hard
 
