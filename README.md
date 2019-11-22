@@ -55,6 +55,7 @@ LeetCode exercise
 - 49 - Group Anagrams
 - 46 - Permutations
 - 77 - Combinations
+- 207 - Course Schedule
 
 ## Hard
 
