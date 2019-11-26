@@ -14,9 +14,16 @@ import java.util.List;
  * https://leetcode.com/problems/course-schedule/
  */
 public class CourseScheduleBasic {
-	
-	// Perform DFS on graph and set departure time of all
-	// vertices of the graph
+
+	/**
+	 * Perform DFS on graph and set departure time of all vertices of the graph
+	 * @param graph
+	 * @param v
+	 * @param discovered
+	 * @param departure
+	 * @param time
+	 * @return
+	 */
 	private static int DFS(Graph graph, int v, boolean[] discovered, int[] departure, int time) {
 		// mark current node as discovered
 		discovered[v] = true;
@@ -35,7 +42,12 @@ public class CourseScheduleBasic {
 		return time;
 	}
 	
-	// returns true if given directed graph is DAG
+	/**
+	 * returns true if given directed graph is DAG
+	 * @param graph
+	 * @param N
+	 * @return
+	 */
 	public static boolean isDAG(Graph graph, int N) {
 		// stores vertex is discovered or not
 		boolean[] discovered = new boolean[N];
@@ -114,34 +126,4 @@ public class CourseScheduleBasic {
 		}
 	}
 
-}
-
-//Data structure to store graph edges
-class Edge {
-	int source, dest;
-
-	public Edge(int source, int dest) {
-		this.source = source;
-		this.dest = dest;
-	}
-}
-
-//Class to represent a graph object
-class Graph {
-	// A List of Lists to represent an adjacency list
-	List<List<Integer>> adjList = null;
-
-	// Constructor
-	Graph(List<Edge> edges, int N) {
-		adjList = new ArrayList<>(N);
-
-		for (int i = 0; i < N; i++) {
-			adjList.add(i, new ArrayList<>());
-		}
-
-		// add edges to the undirected graph
-		for (Edge edge : edges) {
-			adjList.get(edge.source).add(edge.dest);
-		}
-	}
 }
