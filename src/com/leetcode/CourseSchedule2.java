@@ -1,5 +1,7 @@
 /**
- * Topological Sort Algorithm for DAG using DFS
+ * Topological Sorting, it is OK
+ * https://www.geeksforgeeks.org/topological-sorting/
+ * Topological Sort Algorithm for DAG using DFS, it is not right
  * https://www.techiedelight.com/topological-sorting-dag/
  */
 package com.leetcode;
