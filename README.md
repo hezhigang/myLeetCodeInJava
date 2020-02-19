@@ -32,6 +32,7 @@ LeetCode exercise
 - 28 - Implement strStr()
 - 326 - Power of Three
 - 237 - Delete Node in a Linked List
+- 994 - Rotting Oranges
 
 ## Medium
 - 2 - Add Two Numbers
