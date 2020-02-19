@@ -33,6 +33,7 @@ LeetCode exercise
 - 326 - Power of Three
 - 237 - Delete Node in a Linked List
 - 994 - Rotting Oranges
+- 690 - Employee Importance
 
 ## Medium
 - 2 - Add Two Numbers
