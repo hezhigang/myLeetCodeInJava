@@ -109,3 +109,9 @@ LeetCode exercise
 
 # Concurrency
 - 1114 - Print in Order
+
+----------------------------------------------------------
+
+<a href="https://www.jetbrains.com/?from=LeetCode+exercise">
+<img src="./jetbrains.png" style="width:256px; height:256px; border:0; border-radius: 16px;" title="JetBrains" alt="JetBrains">
+</a>
