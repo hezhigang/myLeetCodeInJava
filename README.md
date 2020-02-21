@@ -61,6 +61,7 @@ LeetCode exercise
 - 210 - Course Schedule II
 - 200 - Number of Islands
 - 969 - Pancake Sorting
+- 542 - 01 Matrix
 
 ## Hard
 
@@ -113,5 +114,5 @@ LeetCode exercise
 ----------------------------------------------------------
 
 <a href="https://www.jetbrains.com/?from=LeetCode+exercise">
-<img src="./jetbrains.png" style="width:256px; height:256px; border:0; border-radius: 16px;" title="JetBrains" alt="JetBrains">
+<img src="./jetbrains.png" style="width:256px!important; height:256px!important; border:0!important; border-radius: 16px!important;" title="JetBrains" alt="JetBrains">
 </a>
