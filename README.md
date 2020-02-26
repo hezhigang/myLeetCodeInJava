@@ -34,6 +34,7 @@ LeetCode exercise
 - 237 - Delete Node in a Linked List
 - 994 - Rotting Oranges
 - 690 - Employee Importance
+- 704 - Binary Search
 
 ## Medium
 - 2 - Add Two Numbers
