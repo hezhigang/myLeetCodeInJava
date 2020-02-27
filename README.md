@@ -64,6 +64,7 @@ LeetCode exercise
 - 969 - Pancake Sorting
 - 542 - 01 Matrix
 - 130 - Surrounded Regions
+- 50 - Pow(x, n)
 
 ## Hard
 
