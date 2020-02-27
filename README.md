@@ -35,6 +35,7 @@ LeetCode exercise
 - 994 - Rotting Oranges
 - 690 - Employee Importance
 - 704 - Binary Search
+- 35 - Search Insert Position
 
 ## Medium
 - 2 - Add Two Numbers
