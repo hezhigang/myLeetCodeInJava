@@ -36,6 +36,7 @@ LeetCode exercise
 - 690 - Employee Importance
 - 704 - Binary Search
 - 35 - Search Insert Position
+- 1037 - Valid Boomerang
 
 ## Medium
 - 2 - Add Two Numbers
