@@ -37,6 +37,7 @@ LeetCode exercise
 - 704 - Binary Search
 - 35 - Search Insert Position
 - 1037 - Valid Boomerang
+- 405 - Convert a Number to Hexadecimal
 
 ## Medium
 - 2 - Add Two Numbers
