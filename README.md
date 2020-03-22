@@ -39,6 +39,7 @@ LeetCode exercise
 - 1037 - Valid Boomerang
 - 405 - Convert a Number to Hexadecimal
 - 509 - Fibonacci Number
+- 1389 - Create Target Array in the Given Order
 
 ## Medium
 - 2 - Add Two Numbers
