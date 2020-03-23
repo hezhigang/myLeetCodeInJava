@@ -40,6 +40,7 @@ LeetCode exercise
 - 405 - Convert a Number to Hexadecimal
 - 509 - Fibonacci Number
 - 1389 - Create Target Array in the Given Order
+- 709 - To Lower Case
 
 ## Medium
 - 2 - Add Two Numbers
