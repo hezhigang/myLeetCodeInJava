@@ -41,6 +41,7 @@ LeetCode exercise
 - 509 - Fibonacci Number
 - 1389 - Create Target Array in the Given Order
 - 709 - To Lower Case
+- 867 - Transpose Matrix
 
 ## Medium
 - 2 - Add Two Numbers
