@@ -35,6 +35,17 @@ public class BusRoutes {
         return b;
     }
 
+    /**
+     * Time Limit Exceeded
+     * @param a
+     * @param x
+     * @return
+     */
+    public static boolean inArray2(int[] a, int x) {
+        Set<Integer> set = new HashSet<Integer>(Arrays.stream(a).boxed().collect(Collectors.toCollection(ArrayList::new)));
+        return set.contains(x);
+    }
+
     public static int numBusesToDestination(int[][] routes, int S, int T) {
         if (S==T) return 0;
         int minDist = Integer.MAX_VALUE;
