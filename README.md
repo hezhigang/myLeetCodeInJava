@@ -72,6 +72,7 @@ LeetCode exercise
 - 542 - 01 Matrix
 - 130 - Surrounded Regions
 - 50 - Pow(x, n)
+- 547 - Friend Circles
 
 ## Hard
 
