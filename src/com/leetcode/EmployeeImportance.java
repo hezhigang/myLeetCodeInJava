@@ -13,6 +13,12 @@ import java.util.stream.Collectors;
  */
 public class EmployeeImportance {
 
+	/**
+	 * BFS
+	 * @param employees
+	 * @param id
+	 * @return
+	 */
 	public static int getImportance(List<Employee> employees, int id) {
 		int r = 0;
 
@@ -47,6 +53,82 @@ public class EmployeeImportance {
 		return r;
 	}
 
+	/**
+	 * BFS with HashMap
+	 * @param employees
+	 * @param id
+	 * @return
+	 */
+	public static int getImportance2(List<Employee> employees, int id) {
+		int r = 0;
+
+		Map<Integer,Integer> map = new HashMap<Integer, Integer>();
+		boolean[] visited = new boolean[employees.size()];
+		for(int i=0; i<employees.size(); i++) {
+			map.put(employees.get(i).id, i);
+			visited[i] = false;
+		}
+
+		Queue<Integer> queue = new LinkedList<Integer>();
+
+		int idx = map.get(id);
+		Employee e = employees.get( idx );
+		for(Integer subId:e.subordinates)
+			queue.add(subId);
+		r+=e.importance;
+		visited[idx]=true;
+
+		while (!queue.isEmpty()) {
+			int currId = queue.poll();
+			idx = map.get(currId);
+			if (!visited[idx]) {
+				e = employees.get(idx);
+				for (Integer subId : e.subordinates)
+					queue.add(subId);
+				r += e.importance;
+				visited[idx] = true;
+			}
+		}
+
+		return r;
+	}
+
+	/**
+	 * DFS
+	 * @param employees
+	 * @param id
+	 * @return
+	 */
+	public static int getImportance_dfs(List<Employee> employees, int id) {
+		Map<Integer,Integer> map = new HashMap<Integer, Integer>();
+		boolean[] visited = new boolean[employees.size()];
+		for(int i=0; i<employees.size(); i++) {
+			map.put(employees.get(i).id, i);
+			visited[i] = false;
+		}
+
+		int idx = map.get(id);
+		Employee e = employees.get( idx );
+		int r = e.importance;
+		visited[idx]=true;
+		r += dfs(employees, e, map, visited);
+
+		return r;
+	}
+
+	private static int dfs(List<Employee> employees, Employee employee, Map<Integer,Integer> map, boolean[] visited) {
+		int r = 0;
+		for(Integer subId:employee.subordinates) {
+			int idx = map.get(subId);
+			if (!visited[idx]) {
+				Employee e = employees.get(idx);
+				r += e.importance;
+				visited[idx]=true;
+				r += dfs(employees, e, map, visited);
+			}
+		}
+		return r;
+	}
 
 	public static void main(String[] args) {
 		List<Employee> employees = new ArrayList<Employee>();
@@ -81,6 +163,16 @@ public class EmployeeImportance {
 		int sum = getImportance(employees, rootId);
 
 		System.out.printf("the total importance value of employee %d is %d.", rootId, sum);
+
+		System.out.println();
+
+		int sum2 = getImportance2(employees, rootId);
+		System.out.printf("the total importance value of employee %d is %d.", rootId, sum2);
+
+		System.out.println();
+
+		int sum_dfs = getImportance_dfs(employees, rootId);
+		System.out.printf("the total importance value of employee %d by DFS is %d.", rootId, sum_dfs);
 	}
 
 	// Employee info
