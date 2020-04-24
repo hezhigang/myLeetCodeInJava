@@ -35,7 +35,7 @@ public class SortArray {
      * @return
      */
     public static int[] sortArray_quicksort(int[] nums) {
-        qsort(0,nums.length, nums);
+        qsort(0,nums.length-1, nums);
         return nums;
     }
 
@@ -50,7 +50,7 @@ public class SortArray {
     public static void qsort(int l, int u, int[] inArr) {
         if (l>=u) return; //数组的元素小于2时，终止递归
         int m=l; //m: 中间值的下标
-        for(int i=l+1;i<u; i++)
+        for(int i=l+1;i<=u; i++)
             //不变式: x[l+1..m] < x[l] && x[m+1..i-1]>=x[l]
             if (inArr[i]<inArr[l])
                 swap(inArr, ++m, i);
