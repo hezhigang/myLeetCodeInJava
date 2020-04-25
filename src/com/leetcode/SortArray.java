@@ -1,7 +1,6 @@
 package com.leetcode;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 /**
  * 912. Sort an Array
