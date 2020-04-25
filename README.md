@@ -42,6 +42,7 @@ LeetCode exercise
 - 1389 - Create Target Array in the Given Order
 - 709 - To Lower Case
 - 867 - Transpose Matrix
+- 1185 - Day of the Week
 
 ## Medium
 - 2 - Add Two Numbers
