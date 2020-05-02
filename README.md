@@ -75,6 +75,7 @@ LeetCode exercise
 - 50 - Pow(x, n)
 - 547 - Friend Circles
 - 912 - Sort an Array
+- 48 - Rotate Image
 
 ## Hard
 
