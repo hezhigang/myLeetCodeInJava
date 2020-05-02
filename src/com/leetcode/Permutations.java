@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.leetcode;
 
 import java.util.ArrayList;
