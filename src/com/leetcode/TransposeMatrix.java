@@ -21,10 +21,11 @@ public class TransposeMatrix {
     }
 
     public static void main(String[] args) {
-//        int[][] A = {{1, 2, 3}, {4, 5, 6}};
-        int[][] A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] A = {{1, 2, 3}, {4, 5, 6}};
+//        int[][] A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         Stream.of(A).map(Arrays::toString).forEach(System.out::println);
         int[][] B = transpose(A);
+        System.out.println("after transpose: ");
         Stream.of(B).map(Arrays::toString).forEach(System.out::println);
     }
 }
