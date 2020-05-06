@@ -56,4 +56,6 @@ public class UF {
             throw new IllegalArgumentException("index " + p + " is not between 0 and " + (n-1));
         }
     }
+
+    public int[] parent() {return parent;}
 }
