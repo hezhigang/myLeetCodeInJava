@@ -83,6 +83,7 @@ LeetCode exercise
 - 224 - Basic Calculator
 - 145 - Binary Tree Postorder Traversal
 - 815 - Bus Routes
+- 128 - Longest Consecutive Sequence
 
 -------------------------------------------------------------------------------
 
