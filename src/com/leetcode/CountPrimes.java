@@ -59,6 +59,26 @@ public class CountPrimes {
     }
 
 	/**
+	 * bottom-up approach O(n)
+	 * https://medium.com/@hylei_73413/count-primes-8b5a760c3b3b
+	 * @param n
+	 * @return
+	 */
+	public static int countPrimes3(int n) {
+		boolean notPrime[] = new boolean[n];
+		int count = 0;
+		for (int i = 2; i < n; i++) {
+			if (!notPrime[i]) {
+				count++;
+				for (int j = 2; i * j < n; j++) {
+					notPrime[i * j] = true;
+				}
+			}
+		}
+		return count;
+	}
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -71,8 +91,10 @@ public class CountPrimes {
 		int n = 999983;
 		int i = countPrimes(n);
 		int i2 = countPrimes2(n);
+		int i3 = countPrimes3(n);
 		System.out.println("counts of primes less than "+ n + " is: "+i);
 		System.out.println("counts of primes less than "+ n + " is: "+i2);
+		System.out.println("counts of primes less than "+ n + " is: "+i3);
 	}
 
 }
