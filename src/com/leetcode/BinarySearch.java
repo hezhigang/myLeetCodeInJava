@@ -33,6 +33,30 @@ public class BinarySearch {
         return -1;
     }
 
+    /**
+     * Algorithms, 4th Edition
+     * Robert Sedgewick and Kevin Wayne
+     * @param nums
+     * @param target
+     * @return
+     */
+    public static int search_rank(int[] nums, int target) {
+        // Array must be sorted.
+        int lo = 0;
+        int hi = nums.length - 1;
+        while (lo <= hi) {
+            // Key is in a[lo..hi] or not present.
+            int mid = lo + (hi - lo) / 2;
+            if (target < nums[mid])
+                hi = mid - 1;
+            else if (target > nums[mid])
+                lo = mid + 1;
+            else
+                return mid;
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int[] nums = {-1,0,3,5,9,12};
         int target = 9;
