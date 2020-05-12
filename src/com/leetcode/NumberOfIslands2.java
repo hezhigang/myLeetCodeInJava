@@ -3,8 +3,7 @@
  */
 package com.leetcode;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author hezhigang
@@ -31,7 +30,7 @@ public class NumberOfIslands2 {
         	for (int j=0;j<grid[i].length;j++) {
         		System.out.printf("[%d][%d]=%c ", i, j, grid[i][j]);
         	}
-        	System.out.println();	
+        	System.out.println();
         }
         
         int h = grid.length;
@@ -88,6 +87,46 @@ public class NumberOfIslands2 {
 		return (row >= 0) && (row < width) && (col >= 0) && (col < height) && grid[row][col] == '1' && !visited[row][col];
 	}
 
+	private static boolean isValid(char[][] grid, int width, int height, int row, int col) {
+		return (row >= 0) && (row < width) && (col >= 0) && (col < height) && grid[row][col] == '1';
+	}
+
+	public static int numIslands_uf(char[][] grid) {
+		int h = grid.length;
+		if (h == 0)
+			return 0;
+		int w = grid[0].length;
+
+		int N = 0;
+		List<Point> ptlist = new ArrayList<Point>();
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				if (grid[i][j] == '1') {
+					Point pt = new Point(i,j);
+					ptlist.add(pt);
+					map.put(i+","+j, N++);
+				}
+			}
+		}
+
+		UF uf = new UF(N);
+		for (int i = 0; i < N; i++) {
+			Point curr = ptlist.get(i);
+			int row = curr.x;
+			int col = curr.y;
+			for (int k = 0; k < 4; k++) {
+				int x = row + d[k][0];
+				int y = col + d[k][1];
+				if (isValid(grid, h, w, x, y)) {
+					uf.union(i, map.get(x + "," + y));
+				}
+			}
+		}
+
+		return uf.count();
+	}
+
 	public static void main(String[] args) {
 		char[][] grid0 = {
 				{'1', '1', '1', '1', '0'},
@@ -102,9 +141,26 @@ public class NumberOfIslands2 {
 				{'0', '0', '1', '0', '0'},
 				{'0', '0', '0', '1', '1'}
 		};
-		int c = numIslands(grid);
+
+		char[][] grid1 = {};
+
+		char[][] grid2 = {
+				{ '1', '1', '1' },
+				{ '0', '1', '0' },
+				{ '1', '1', '1' } };
+
+		char[][] grid3 = {
+				{ '1', '0', '1', '1', '1' },
+				{ '1', '0', '1', '0', '1' },
+				{ '1', '1', '1', '0', '1' } };
+
+		int c = numIslands(grid0);
+
+		int c2 = numIslands_uf(grid0);
 		
 		System.out.printf("Number of Islands is %d", c);
+		System.out.println();
+		System.out.printf("Number of Islands is %d", c2);
 		
 	}
 	
