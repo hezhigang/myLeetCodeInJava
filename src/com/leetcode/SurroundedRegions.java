@@ -64,6 +64,13 @@ public class SurroundedRegions {
         return (row >= 0) && (row < width) && (col >= 0) && (col < height) && grid[row][col] == 'O';
     }
 
+    public static void solve_uf(char[][] board) {
+        int h = board.length;
+        int w = h==0 ? 0 : board[0].length;
+
+        if (h==0 || w==0) return;
+    }
+
     public static void main(String[] args) {
         char[][] board = {
                 {'X', 'X', 'X', 'X'},
@@ -71,6 +78,14 @@ public class SurroundedRegions {
                 {'X', 'X', 'O', 'X'},
                 {'X', 'O', 'X', 'X'}
         };
+
+        char[][] board2 = {
+                {'X', 'X', 'X', 'X'},
+                {'O', 'O', 'O', 'X'},
+                {'X', 'X', 'O', 'X'},
+                {'X', 'O', 'X', 'X'}
+        };
+
         Stream.of(board).map(Arrays::toString).forEach(System.out::println);
 
         System.out.println();
