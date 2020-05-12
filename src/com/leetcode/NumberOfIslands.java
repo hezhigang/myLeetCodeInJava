@@ -79,23 +79,22 @@ public class NumberOfIslands {
         }
     }
 
-	public static void main(String[] args) {
-		char[][] grid0 = {
-				{'1', '1', '1', '1', '0'},
-				{'1', '1', '0', '1', '0'},
-				{'1', '1', '0', '0', '0'},
-				{'0', '0', '0', '0', '0'}
-		};
-		
-		char[][] grid = {
-				{'1', '1', '0', '0', '0'},
-				{'1', '1', '0', '0', '0'},
-				{'0', '0', '1', '0', '0'},
-				{'0', '0', '0', '1', '1'}
-		};
-		int c = numIslands(grid);
-		
-		System.out.printf("Number of Islands is %d", c);
-		
-	}
+    public static void main(String[] args) {
+        char[][] grid0 = {
+                { '1', '1', '1', '1', '0' },
+                { '1', '1', '0', '1', '0' },
+                { '1', '1', '0', '0', '0' },
+                { '0', '0', '0', '0', '0' }
+        };
+
+        char[][] grid = {
+                { '1', '1', '0', '0', '0' },
+                { '1', '1', '0', '0', '0' },
+                { '0', '0', '1', '0', '0' },
+                { '0', '0', '0', '1', '1' }
+        };
+        int c = numIslands(grid);
+
+        System.out.printf("Number of Islands is %d", c);
+    }
 }
