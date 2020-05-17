@@ -46,14 +46,14 @@ public class RemoveDuplicates {
     			nums[++j]=nums[i];
     	}
     	return ++j;
-    }    
+    }
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		int[] arr1 = {1,1,2};
-		System.out.println(Arrays.toString(arr1)+"->"+removeDuplicates2(arr1));
+		System.out.printf("new length of %s after removing Duplicates = %d \n", Arrays.toString(arr1), removeDuplicates2(arr1));
 		int[] arr2 = {0,0,1,1,1,2,2,3,3,4};
 		System.out.println(Arrays.toString(arr2)+"->"+removeDuplicates2(arr2));
 	}

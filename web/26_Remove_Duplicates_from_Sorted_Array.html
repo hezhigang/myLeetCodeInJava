@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26. Remove Duplicates from Sorted Array</title>
+    <script type="text/javascript">
+        function removeDuplicates(nums) {
+            if (nums.length < 2) return nums.length;
+            for (var i = 0; i < nums.length; i++) {
+                // The splice() method changes the contents of an array
+                // by removing or replacing existing elements
+                // and/or adding new elements in place.
+                while (nums[i] === nums[i - 1]) nums.splice(i, 1);
+            }
+            return nums.length;
+        }
+
+        // var nums = [1,1,2];
+        // var nums = [0,0,1,1,1,2,2,3,3,4];
+        var nums = [0,0,1,1,1,2,2,3,3,4];
+
+        var len = removeDuplicates(nums);
+        console.log(`after removing Duplicates, length of ${nums} = ${len}`);
+    </script>
+</head>
+<body>
+<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">26. Remove Duplicates from Sorted Array</a>
+<hr/>
+</body>
+</html>
