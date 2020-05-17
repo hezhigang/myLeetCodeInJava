@@ -134,7 +134,8 @@ public class BasicCalculatorShuntingYard {
 
 //        String s = "1 + 1";
 //        String s = " 2-1 + 2 ";
-        String s = "(1+(4+5+2)-3)+(6+8)";
+//        String s = "(1+(4+5+2)-3)+(6+8)";
+        String s = "3 + 4 * 2 / ( 1 - 5 ) ^ 2 ^ 3";
         System.out.println( s + " = " + calculate(s) );
     }
 }
