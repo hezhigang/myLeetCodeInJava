@@ -43,6 +43,7 @@ LeetCode exercise
 - 709 - To Lower Case
 - 867 - Transpose Matrix
 - 1185 - Day of the Week
+- 205 - Isomorphic Strings
 
 ## Medium
 - 2 - Add Two Numbers
