@@ -44,6 +44,7 @@ LeetCode exercise
 - 867 - Transpose Matrix
 - 1185 - Day of the Week
 - 205 - Isomorphic Strings
+- 169 - Majority Element
 
 ## Medium
 - 2 - Add Two Numbers
