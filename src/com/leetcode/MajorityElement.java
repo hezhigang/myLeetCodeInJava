@@ -12,9 +12,8 @@ public class MajorityElement {
         final int len = nums.length;
         int halfsize = len >> 1;
         System.out.printf("half size = %d \n", halfsize);
-
-        int major = nums[0];
-        return major;
+        Arrays.sort(nums);
+        return nums[halfsize];
     }
 
     public static int majorityElement_brute(int[] nums) {
@@ -42,8 +41,10 @@ public class MajorityElement {
     }
 
     public static void main(String[] args) {
-//        int[] nums = { 3, 2, 3 };
-        int[] nums = { 2, 2, 1, 1, 1, 2, 2 };
+        int[] nums = { 3, 2, 3 };
+//        int[] nums = { 2, 2, 1, 1, 1, 2, 2 };
         System.out.printf("the majority element of %s = %d \n", Arrays.toString(nums), majorityElement_brute(nums));
+
+        System.out.printf("the majority element of %s = %d \n", Arrays.toString(nums), majorityElement(nums));
     }
 }
