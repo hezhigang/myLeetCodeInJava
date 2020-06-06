@@ -45,6 +45,7 @@ LeetCode exercise
 - 1185 - Day of the Week
 - 205 - Isomorphic Strings
 - 169 - Majority Element
+- 172 - Factorial Trailing Zeroes
 
 ## Medium
 - 2 - Add Two Numbers
