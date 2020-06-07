@@ -9,6 +9,19 @@ public class FactorialTrailingZeroes {
     public static int trailingZeroes(int n) {
         if (n < 5)
             return 0;
+        long x = 0;
+        long p = 5;
+        while (n >= p) {
+            x += n / p;
+            p *= 5;
+        }
+        Long l = new Long(x);
+        return l.intValue();
+    }
+
+    public static int trailingZeroes_v2(int n) {
+        if (n < 5)
+            return 0;
         int m = logarithm(n, 5);
         System.out.println(m);
         int x = 0;
@@ -45,14 +58,21 @@ public class FactorialTrailingZeroes {
     public static void main(String[] args) {
 //        int n = 3;
 //        int n = 5;
+//        int n = 25;
 //        int n = 30;
+//        int n = 125;
 //        int n = 126;
+//        int n = 625;
 //        int n = 0;
-        int n = 50;
-        int c = trailingZeroes(n);
-        int c2 = trailingZeroes_v1(n);
+//        int n = 50;
+        int n = 1808548329;
 
-        System.out.printf("the number of trailing zeroes in %d! = %d \n", n, c2);
+        int c = trailingZeroes(n);
+        int c1 = trailingZeroes_v1(n);
+        int c2 = trailingZeroes_v2(n);
+
         System.out.printf("the number of trailing zeroes in %d! = %d \n", n, c);
+        System.out.printf("the number of trailing zeroes in %d! = %d \n", n, c1);
+        System.out.printf("the number of trailing zeroes in %d! = %d \n", n, c2);
     }
 }
