@@ -6,7 +6,20 @@ package com.leetcode;
  */
 public class FactorialTrailingZeroes {
 
+    /**
+     * Count trailing zeroes in factorial of a number
+     * https://www.geeksforgeeks.org/count-trailing-zeroes-factorial-number/
+     * @param n
+     * @return
+     */
     public static int trailingZeroes(int n) {
+        int count = 0;
+        for (long i = 5; i <= n; i *= 5)
+            count += n / i;
+        return count;
+    }
+
+    public static int trailingZeroes_v4(int n) {
         if (n < 5)
             return 0;
         int x = 0;
@@ -82,10 +95,12 @@ public class FactorialTrailingZeroes {
         int c1 = trailingZeroes_v1(n);
         int c2 = trailingZeroes_v2(n);
         int c3 = trailingZeroes_v3(n);
+        int c4 = trailingZeroes_v4(n);
 
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c);
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c1);
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c2);
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c3);
+        System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c4);
     }
 }
