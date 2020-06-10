@@ -79,6 +79,23 @@ public class FactorialTrailingZeroes {
         return x;
     }
 
+    /**
+     * the sum of the first m terms of a geometric series
+     * fault method, has error
+     * it returns larger count when n greater than 75
+     * @param n
+     * @return
+     */
+    public static int trailingZeroes_v5(int n) {
+        if (n == 0)
+            return 0;
+        Double d = Math.floor((Math.log(n)) / (Math.log(5)));
+        int m = d.intValue();
+        Double x = n/4*(1-Math.pow(1/5,m+1));
+//        Long l = x.longValue();
+        return x.intValue();
+    }
+
     public static void main(String[] args) {
 //        int n = 3;
 //        int n = 5;
@@ -89,6 +106,13 @@ public class FactorialTrailingZeroes {
 //        int n = 625;
 //        int n = 0;
 //        int n = 50;
+//        int n = 75;
+//        int n = 100;
+//        int n = 200;
+//        int n = 300;
+//        int n = 500;
+//        int n = 1000;
+//        int n = 10000;
         int n = 1808548329;
 
         int c = trailingZeroes(n);
@@ -96,11 +120,13 @@ public class FactorialTrailingZeroes {
         int c2 = trailingZeroes_v2(n);
         int c3 = trailingZeroes_v3(n);
         int c4 = trailingZeroes_v4(n);
+        int c5 = trailingZeroes_v5(n);
 
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c);
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c1);
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c2);
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c3);
         System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c4);
+        System.out.printf("the number of trailing zeroes in %d! = %d\n", n, c5);
     }
 }
