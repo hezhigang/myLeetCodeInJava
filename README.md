@@ -88,6 +88,7 @@ LeetCode exercise
 - 145 - Binary Tree Postorder Traversal
 - 815 - Bus Routes
 - 128 - Longest Consecutive Sequence
+- 793 - Preimage Size of Factorial Zeroes Function
 
 -------------------------------------------------------------------------------
 
