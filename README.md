@@ -89,6 +89,7 @@ LeetCode exercise
 - 815 - Bus Routes
 - 128 - Longest Consecutive Sequence
 - 793 - Preimage Size of Factorial Zeroes Function
+- 149 - Max Points on a Line
 
 -------------------------------------------------------------------------------
 
