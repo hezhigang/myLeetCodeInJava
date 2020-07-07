@@ -46,6 +46,7 @@ LeetCode exercise
 - 205 - Isomorphic Strings
 - 169 - Majority Element
 - 172 - Factorial Trailing Zeroes
+- 1342 - Number of Steps to Reduce a Number to Zero
 
 ## Medium
 - 2 - Add Two Numbers
