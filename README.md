@@ -48,6 +48,7 @@ LeetCode exercise
 - 172 - Factorial Trailing Zeroes
 - 1342 - Number of Steps to Reduce a Number to Zero
 - 1480 - Running Sum of 1d Array
+- 1486 - XOR Operation in an Array
 
 ## Medium
 - 2 - Add Two Numbers
