@@ -50,6 +50,8 @@ LeetCode exercise
 - 1480 - Running Sum of 1d Array
 - 1486 - XOR Operation in an Array
 - 66 - Plus One
+- 476 - Number Complement
+- 1009 - Complement of Base 10 Integer
 
 ## Medium
 - 2 - Add Two Numbers
