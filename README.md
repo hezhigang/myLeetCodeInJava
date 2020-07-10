@@ -52,6 +52,7 @@ LeetCode exercise
 - 66 - Plus One
 - 476 - Number Complement
 - 1009 - Complement of Base 10 Integer
+- 231 - Power of Two
 
 ## Medium
 - 2 - Add Two Numbers
