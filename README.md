@@ -53,6 +53,7 @@ LeetCode exercise
 - 476 - Number Complement
 - 1009 - Complement of Base 10 Integer
 - 231 - Power of Two
+- 342 - Power of Four
 
 ## Medium
 - 2 - Add Two Numbers
