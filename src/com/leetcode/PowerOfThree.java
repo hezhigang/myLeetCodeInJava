@@ -11,13 +11,15 @@ package com.leetcode;
 public class PowerOfThree {
 
 	/**
-	 * https://leetcode.com/problems/power-of-three/discuss/235907/Java-Solutions
+	 * Approach 4: Integer Limitations
+	 * https://leetcode.com/problems/power-of-three/solution/
+	 * the maximum value of n that is also a power of three is 1162261467.
 	 * @param n
 	 * @return
 	 */
-    public static boolean isPowerOfThree(int n) {
-    	return n>0 && 1162261467%n==0?true:false;
-    }
+	public static boolean isPowerOfThree(int n) {
+		return n > 0 && 1162261467 % n == 0;
+	}
     
     /**
      * https://leetcode.com/problems/power-of-three/discuss/192930/Java-No-LoopRecursion-(Using-Logarithm)
