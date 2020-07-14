@@ -54,6 +54,7 @@ LeetCode exercise
 - 1009 - Complement of Base 10 Integer
 - 231 - Power of Two
 - 342 - Power of Four
+- 88 - Merge Sorted Array
 
 ## Medium
 - 2 - Add Two Numbers
