@@ -55,6 +55,7 @@ LeetCode exercise
 - 231 - Power of Two
 - 342 - Power of Four
 - 88 - Merge Sorted Array
+- 977 - Squares of a Sorted Array
 - 1470 - Shuffle the Array
 
 ## Medium
