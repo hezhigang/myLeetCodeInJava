@@ -57,6 +57,7 @@ LeetCode exercise
 - 88 - Merge Sorted Array
 - 977 - Squares of a Sorted Array
 - 1470 - Shuffle the Array
+- 349 - Intersection of Two Arrays
 
 ## Medium
 - 2 - Add Two Numbers
