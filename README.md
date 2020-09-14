@@ -59,6 +59,7 @@ LeetCode exercise
 - 1470 - Shuffle the Array
 - 349 - Intersection of Two Arrays
 - 392 - Is Subsequence
+- 507 - Perfect Number
 
 ## Medium
 - 2 - Add Two Numbers
