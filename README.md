@@ -60,6 +60,7 @@ LeetCode exercise
 - 349 - Intersection of Two Arrays
 - 392 - Is Subsequence
 - 507 - Perfect Number
+- 796 - Rotate String
 
 ## Medium
 - 2 - Add Two Numbers
