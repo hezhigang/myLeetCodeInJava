@@ -61,6 +61,7 @@ LeetCode exercise
 - 392 - Is Subsequence
 - 507 - Perfect Number
 - 796 - Rotate String
+- 242 - Valid Anagram
 
 ## Medium
 - 2 - Add Two Numbers
