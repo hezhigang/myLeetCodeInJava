@@ -96,6 +96,7 @@ LeetCode exercise
 - 912 - Sort an Array
 - 48 - Rotate Image
 - 34 - Find First and Last Position of Element in Sorted Array
+- 15 - 3Sum
 
 ## Hard
 
