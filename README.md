@@ -62,6 +62,7 @@ LeetCode exercise
 - 507 - Perfect Number
 - 796 - Rotate String
 - 242 - Valid Anagram
+- 189 - Rotate Array
 
 ## Medium
 - 2 - Add Two Numbers
