@@ -24,7 +24,7 @@ public class RotateArray {
      * @param nums
      * @param k
      */
-    public static void rotate(int[] nums, int k) {
+    public static void rotate_brute(int[] nums, int k) {
         int temp;
         final int N = nums.length;
         if (k >= N)
@@ -38,6 +38,29 @@ public class RotateArray {
         }
     }
 
+    /**
+     * Using Reverse
+     * @param nums
+     * @param k
+     */
+    public static void rotate(int[] nums, int k) {
+        final int N = nums.length;
+        if (k >= N)
+            k = k % N;
+        reverse(nums, 0, N - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, N - 1);
+    }
+
+    private static void reverse(int[] nums, int start, int end) {
+        int temp;
+        for (int i = 0; i < (end - start + 1) / 2; i++) {
+            temp = nums[start + i];
+            nums[start + i] = nums[end - i];
+            nums[end - i] = temp;
+        }
+    }
+
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
         int k = 3;
@@ -45,6 +68,7 @@ public class RotateArray {
 //        int k = 2;
         System.out.printf("before rotate: %s", Arrays.toString(nums));
         rotate(nums, k);
+//        reverse(nums, 0, 3);
         System.out.println();
         System.out.printf("after rotate the array to the right by %d steps: %s", k, Arrays.toString(nums));
     }
