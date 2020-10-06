@@ -13,7 +13,7 @@ public class SortArray {
      * @param nums
      * @return
      */
-    public static int[] sortArray(int[] nums) {
+    public static int[] sortArray_insertion(int[] nums) {
         int temp;
         for (int i = 1; i < nums.length; i++) {
             for (int j = i; j > 0; j--) {
@@ -64,9 +64,30 @@ public class SortArray {
         arr[j] = temp;
     }
 
+    /**
+     * selection sort
+     * @param nums
+     * @return
+     */
+    public static int[] sortArray(int[] nums) {
+        final int N = nums.length;
+        int temp;
+        for (int i = 0; i < N; i++) {
+            int min = i;
+            for (int j = i + 1; j < N; j++) {
+                if (nums[j] < nums[min])
+                    min = j;
+            }
+            temp = nums[min];
+            nums[min] = nums[i];
+            nums[i] = temp;
+        }
+        return nums;
+    }
+
     public static void main(String[] args) {
-//        int[] nums = {5,2,3,1};
-        int[] nums = {5,1,1,2,0,0};
+        int[] nums = {5,2,3,1};
+//        int[] nums = {5,1,1,2,0,0};
         System.out.printf("before sorting as : %s", Arrays.toString(nums) );
 //        int[] sortedNums = sortArray(nums);
         int[] sortedNums = sortArray_quicksort(nums);
