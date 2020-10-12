@@ -63,6 +63,7 @@ LeetCode exercise
 - 796 - Rotate String
 - 242 - Valid Anagram
 - 189 - Rotate Array
+- 1572 - Matrix Diagonal Sum
 
 ## Medium
 - 2 - Add Two Numbers
