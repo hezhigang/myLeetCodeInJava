@@ -64,6 +64,7 @@ LeetCode exercise
 - 242 - Valid Anagram
 - 189 - Rotate Array
 - 1572 - Matrix Diagonal Sum
+- 1002 - Find Common Characters
 
 ## Medium
 - 2 - Add Two Numbers
