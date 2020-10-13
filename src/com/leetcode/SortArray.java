@@ -69,7 +69,7 @@ public class SortArray {
      * @param nums
      * @return
      */
-    public static int[] sortArray(int[] nums) {
+    public static int[] sortArray_selection(int[] nums) {
         final int N = nums.length;
         int temp;
         for (int i = 0; i < N; i++) {
@@ -85,12 +85,31 @@ public class SortArray {
         return nums;
     }
 
+    public static int[] sortArray(int[] nums) {
+        final int N = nums.length;
+        int h = 1;
+        for (; h < N / 3; h = 3 * h + 1) ;
+        int temp;
+        for (; h >= 1; h /= 3) {
+            for (int i = h; i < N; i++) {
+                for (int j = i; j >= h; j -= h) {
+                    if (nums[j] < nums[j - h]) {
+                        temp = nums[j];
+                        nums[j] = nums[j - h];
+                        nums[j - h] = temp;
+                    }
+                }
+            }
+        }
+        return nums;
+    }
+
     public static void main(String[] args) {
-        int[] nums = {5,2,3,1};
-//        int[] nums = {5,1,1,2,0,0};
+        int[] nums = {5, 2, 3, 1};
+//        int[] nums = {5, 1, 1, 2, 0, 0};
         System.out.printf("before sorting as : %s", Arrays.toString(nums) );
-//        int[] sortedNums = sortArray(nums);
-        int[] sortedNums = sortArray_quicksort(nums);
+        int[] sortedNums = sortArray(nums);
+//        int[] sortedNums = sortArray_quicksort(nums);
 
         System.out.println();
         System.out.printf("after sorting as : %s", Arrays.toString(sortedNums) );
