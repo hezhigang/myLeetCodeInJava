@@ -13,29 +13,29 @@ import java.util.Random;
 public class ShuffleArray2 {
 	private int[] shuffleArr;
 	private int[] originalArr;
-	
-    public ShuffleArray2(int[] nums) {
-    	originalArr = nums.clone();
-    	shuffleArr = nums.clone();
-    }
+
+	public ShuffleArray2(int[] nums) {
+		originalArr = nums.clone();
+		shuffleArr = nums.clone();
+	}
     
     /** Resets the array to its original configuration and return it. */
-    public int[] reset() {
-        return originalArr;
-    }
+	public int[] reset() {
+		return originalArr;
+	}
     
     /** Returns a random shuffling of the array. */
-    public int[] shuffle() {
-    	Random random = new Random();
-    	int temp = 0;
-    	int randomPosition = 0;
-    	final int N = shuffleArr.length;
-    	for(int i=shuffleArr.length-1;i>0;i--) {
-    		randomPosition = random.nextInt(N);
-    		temp = shuffleArr[i];
-    		shuffleArr[i] = shuffleArr[randomPosition];
-    		shuffleArr[randomPosition] = temp;
-    	}
-        return shuffleArr;        
-    }	
+	public int[] shuffle() {
+		Random random = new Random();
+		int temp = 0;
+		int randomPosition = 0;
+		final int N = shuffleArr.length;
+		for (int i = N - 1; i > 0; i--) {
+			randomPosition = random.nextInt(N);
+			temp = shuffleArr[i];
+			shuffleArr[i] = shuffleArr[randomPosition];
+			shuffleArr[randomPosition] = temp;
+		}
+		return shuffleArr;
+	}
 }

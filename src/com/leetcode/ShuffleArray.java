@@ -21,29 +21,29 @@ public class ShuffleArray {
 	 */
 	private Integer[] shuffleArr;
 	private int[] originalArr;
-	
-    public ShuffleArray(int[] nums) {
-    	shuffleArr = new Integer[nums.length];
-    	for(int i=0;i<nums.length;i++)
-    		shuffleArr[i] = nums[i];
-    	originalArr = nums.clone();
-    	System.out.println(Arrays.toString(originalArr));
-    }
+
+	public ShuffleArray(int[] nums) {
+		shuffleArr = new Integer[nums.length];
+		for (int i = 0; i < nums.length; i++)
+			shuffleArr[i] = nums[i];
+		originalArr = nums.clone();
+		System.out.println(Arrays.toString(originalArr));
+	}
     
     /** Resets the array to its original configuration and return it. */
-    public int[] reset() {
-        return originalArr;
-    }
+	public int[] reset() {
+		return originalArr;
+	}
     
     /** Returns a random shuffling of the array. */
-    public int[] shuffle() {
-    	List<Integer> list = Arrays.asList(shuffleArr); 
-    	Collections.shuffle(list);
-    	Integer[] a = new Integer[shuffleArr.length];
-    	list.toArray(a);
-    	int[] r = new int[a.length];
-    	for(int i=0;i<a.length;i++)
-    		r[i] = a[i];
-        return r;
-    }
+	public int[] shuffle() {
+		List<Integer> list = Arrays.asList(shuffleArr);
+		Collections.shuffle(list);
+		Integer[] a = new Integer[shuffleArr.length];
+		list.toArray(a);
+		int[] r = new int[a.length];
+		for (int i = 0; i < a.length; i++)
+			r[i] = a[i];
+		return r;
+	}
 }
