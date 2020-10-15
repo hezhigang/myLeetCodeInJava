@@ -73,7 +73,7 @@ public class DayOfTheYear {
      * @param date
      * @return
      */
-    public static int dayOfYear(String date) {
+    public static int dayOfYear_v2(String date) {
         StringTokenizer tokenizer = new StringTokenizer(date, "-", false);
         int year = Integer.parseInt(tokenizer.nextToken());
         int month = Integer.parseInt(tokenizer.nextToken());
@@ -89,13 +89,28 @@ public class DayOfTheYear {
         return dy;
     }
 
+    public static int dayOfYear(String date) {
+        int year = Integer.parseInt(date.substring(0,4));
+        int month = Integer.parseInt(date.substring(5,7));
+        int day = Integer.parseInt(date.substring(8,10));
+        int[] dayOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        boolean leapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+        if (leapYear)
+            dayOfMonth[1] = 29;
+        int dy = day;
+        for (int i = 1; i < month; i++) {
+            dy += dayOfMonth[i - 1];
+        }
+        return dy;
+    }
+
     public static void main(String[] args) {
-//        String date = "2019-01-09";
+        String date = "2019-01-09";
 //        String date = "2019-02-10";
 //        String date = "2003-03-01";
 //        String date = "2004-03-01";
 //        String date = "1900-03-25";
-        String date = "2016-02-29";
+//        String date = "2016-02-29";
         System.out.printf("day %s of the year is : %d", date, dayOfYear(date));
     }
 }
