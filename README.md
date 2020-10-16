@@ -66,6 +66,7 @@ LeetCode exercise
 - 1572 - Matrix Diagonal Sum
 - 1002 - Find Common Characters
 - 1154 - Day of the Year
+- 905 - Sort Array By Parity
 
 ## Medium
 - 2 - Add Two Numbers
