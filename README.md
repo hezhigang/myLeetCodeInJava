@@ -68,6 +68,7 @@ LeetCode exercise
 - 1154 - Day of the Year
 - 905 - Sort Array By Parity
 - 832 - Flipping an Image
+- 1232 - Check If It Is a Straight Line
 
 ## Medium
 - 2 - Add Two Numbers
