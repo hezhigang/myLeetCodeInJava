@@ -69,6 +69,7 @@ LeetCode exercise
 - 905 - Sort Array By Parity
 - 832 - Flipping an Image
 - 1232 - Check If It Is a Straight Line
+- 896 - Monotonic Array
 
 ## Medium
 - 2 - Add Two Numbers
