@@ -29,7 +29,7 @@ public class MonotonicArray {
             d[j] = A[i] - A[i - 1];
         }
         int min = d[0], max = d[0];
-        for (int i = 0; i < N - 1; i++) {
+        for (int i = 1; i < N - 1; i++) {
             if (d[i] < min) min = d[i];
             if (d[i] > max) max = d[i];
         }
