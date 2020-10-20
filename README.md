@@ -70,6 +70,7 @@ LeetCode exercise
 - 832 - Flipping an Image
 - 1232 - Check If It Is a Straight Line
 - 896 - Monotonic Array
+- 414 - Third Maximum Number
 
 ## Medium
 - 2 - Add Two Numbers
