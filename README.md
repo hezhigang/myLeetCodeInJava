@@ -71,6 +71,7 @@ LeetCode exercise
 - 1232 - Check If It Is a Straight Line
 - 896 - Monotonic Array
 - 414 - Third Maximum Number
+- 203 - Remove Linked List Elements
 
 ## Medium
 - 2 - Add Two Numbers
