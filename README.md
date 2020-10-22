@@ -73,6 +73,7 @@ LeetCode exercise
 - 414 - Third Maximum Number
 - 203 - Remove Linked List Elements
 - 876 - Middle of the Linked List
+- 83 - Remove Duplicates from Sorted List
 
 ## Medium
 - 2 - Add Two Numbers
