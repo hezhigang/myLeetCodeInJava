@@ -85,7 +85,12 @@ public class SortArray {
         return nums;
     }
 
-    public static int[] sortArray(int[] nums) {
+    /**
+     * shell sort
+     * @param nums
+     * @return
+     */
+    public static int[] sortArray_shellsort(int[] nums) {
         final int N = nums.length;
         int h = 1;
         for (; h < N / 3; h = 3 * h + 1) ;
@@ -104,9 +109,66 @@ public class SortArray {
         return nums;
     }
 
+    /**
+     * stably merge a[lo .. mid] with a[mid+1 ..hi] using aux[lo .. hi]
+     * @author Robert Sedgewick
+     * @author Kevin Wayne
+     * @param a
+     * @param aux
+     * @param lo
+     * @param mid
+     * @param hi
+     */
+    private static void merge(int[] a, int[] aux, int lo, int mid, int hi) {
+        // copy to aux[]
+        for (int k = lo; k <= hi; k++) {
+            aux[k] = a[k];
+        }
+
+        // merge back to a[]
+        int i = lo, j = mid + 1;
+        for (int k = lo; k <= hi; k++) {
+            if (i > mid) a[k] = aux[j++];
+            else if (j > hi) a[k] = aux[i++];
+            else if (aux[j] < aux[i]) a[k] = aux[j++];
+            else a[k] = aux[i++];
+        }
+    }
+
+    /**
+     * mergesort a[lo..hi] using auxiliary array aux[lo..hi]
+     * @author Robert Sedgewick
+     * @author Kevin Wayne
+     * @param a
+     * @param aux
+     * @param lo
+     * @param hi
+     */
+    private static void sort(int[] a, int[] aux, int lo, int hi) {
+        if (hi <= lo) return;
+        int mid = lo + (hi - lo) / 2;
+        sort(a, aux, lo, mid);
+        sort(a, aux, mid + 1, hi);
+        merge(a, aux, lo, mid, hi);
+    }
+
+    /**
+     * top-down, recursive version of mergesort
+     * Runtime: 6 ms, faster than 57.85% of Java online submissions for Sort an Array.
+     * Memory Usage: 46.3 MB, less than 14.62% of Java online submissions for Sort an Array.
+     * @param nums
+     * @return
+     */
+    public static int[] sortArray(int[] nums) {
+        final int N = nums.length;
+        int[] aux = new int[N];
+        sort(nums, aux, 0, N - 1);
+        return nums;
+    }
+
     public static void main(String[] args) {
-        int[] nums = {5, 2, 3, 1};
-//        int[] nums = {5, 1, 1, 2, 0, 0};
+//        int[] nums = {5, 2, 3, 1};
+        int[] nums = {5, 1, 1, 2, 0, 0};
         System.out.printf("before sorting as : %s", Arrays.toString(nums) );
         int[] sortedNums = sortArray(nums);
 //        int[] sortedNums = sortArray_quicksort(nums);
