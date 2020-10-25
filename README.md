@@ -74,6 +74,7 @@ LeetCode exercise
 - 203 - Remove Linked List Elements
 - 876 - Middle of the Linked List
 - 83 - Remove Duplicates from Sorted List
+- 160 - Intersection of Two Linked Lists
 
 ## Medium
 - 2 - Add Two Numbers
