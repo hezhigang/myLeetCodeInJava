@@ -159,16 +159,39 @@ public class SortArray {
      * @param nums
      * @return
      */
-    public static int[] sortArray(int[] nums) {
+    public static int[] sortArray_mergesort_top_down(int[] nums) {
         final int N = nums.length;
         int[] aux = new int[N];
         sort(nums, aux, 0, N - 1);
         return nums;
     }
 
+    /**
+     * bottom-up mergesort
+     * 11 / 11 test cases passed.
+     * Runtime: 7 ms, faster than 34.85% of Java online submissions for Sort an Array.
+     * Memory Usage: 46.7 MB, less than 12.67% of Java online submissions for Sort an Array.
+     * @param nums
+     * @return
+     * @author Robert Sedgewick
+     * @author Kevin Wayne
+     */
+    public static int[] sortArray(int[] nums) {
+        final int N = nums.length;
+        int[] aux = new int[N];
+        for (int len = 1; len < N; len *= 2) {
+            for (int lo = 0; lo < N - len; lo += len + len) {
+                int mid = lo + len - 1;
+                int hi = Math.min(lo + len + len - 1, N - 1);
+                merge(nums, aux, lo, mid, hi);
+            }
+        }
+        return nums;
+    }
+
     public static void main(String[] args) {
-//        int[] nums = {5, 2, 3, 1};
-        int[] nums = {5, 1, 1, 2, 0, 0};
+        int[] nums = {5, 2, 3, 1};
+//        int[] nums = {5, 1, 1, 2, 0, 0};
         System.out.printf("before sorting as : %s", Arrays.toString(nums) );
         int[] sortedNums = sortArray(nums);
 //        int[] sortedNums = sortArray_quicksort(nums);
