@@ -75,6 +75,7 @@ LeetCode exercise
 - 876 - Middle of the Linked List
 - 83 - Remove Duplicates from Sorted List
 - 160 - Intersection of Two Linked Lists
+- 1290 - Convert Binary Number in a Linked List to Integer
 
 ## Medium
 - 2 - Add Two Numbers
