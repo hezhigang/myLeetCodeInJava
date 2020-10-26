@@ -23,7 +23,7 @@ public class IntersectionTwoLinkedLists {
      * @param headB
      * @return
      */
-    public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public static ListNode getIntersectionNode_stack(ListNode headA, ListNode headB) {
         if (headA == null || headB == null)
             return null;
 //        Stack<ListNode> stkA = new Stack<ListNode>();
@@ -46,6 +46,50 @@ public class IntersectionTwoLinkedLists {
                 stkB.pop();
             } else
                 break;
+        }
+        return node;
+    }
+
+    /**
+     *
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null)
+            return null;
+        ListNode nodeA = headA;
+        int lenA = 0;
+        while (nodeA != null) {
+            lenA++;
+            nodeA = nodeA.next;
+        }
+        int lenB = 0;
+        ListNode nodeB = headB;
+        while (nodeB != null) {
+            lenB++;
+            nodeB = nodeB.next;
+        }
+        nodeA = headA;
+        nodeB = headB;
+        if (lenA < lenB) {
+            for (int i = 0; i < lenB - lenA; i++) {
+                nodeB = nodeB.next;
+            }
+        }
+        if (lenA > lenB) {
+            for (int i = 0; i < lenA - lenB; i++) {
+                nodeA = nodeA.next;
+            }
+        }
+        ListNode node = null;
+        if (nodeA == nodeB)
+            node = nodeA;
+        while (nodeA != nodeB) {
+            nodeA = nodeA.next;
+            nodeB = nodeB.next;
+            node = nodeA;
         }
         return node;
     }
