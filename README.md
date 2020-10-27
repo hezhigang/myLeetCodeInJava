@@ -77,6 +77,7 @@ LeetCode exercise
 - 160 - Intersection of Two Linked Lists
 - 1290 - Convert Binary Number in a Linked List to Integer
 - 141 - Linked List Cycle
+- 234 - Palindrome Linked List
 
 ## Medium
 - 2 - Add Two Numbers
