@@ -34,7 +34,7 @@ public class MiddleNodeInLinkedList {
      * @param head
      * @return
      */
-    public static ListNode middleNode(ListNode head) {
+    public static ListNode middleNode_v2(ListNode head) {
         int n = 0;
         ListNode node = head;
         while (node != null) {
@@ -48,6 +48,24 @@ public class MiddleNodeInLinkedList {
             n--;
         }
         return node;
+    }
+
+    /**
+     * Two pointers
+     * 15 / 15 test cases passed.
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Middle of the Linked List.
+     * Memory Usage: 36 MB, less than 9.03% of Java online submissions for Middle of the Linked List.
+     * @param head
+     * @return
+     */
+    public static ListNode middleNode(ListNode head) {
+        ListNode slowPointer = head;
+        ListNode fastPointer = head;
+        while (fastPointer != null && fastPointer.next != null) {
+            fastPointer = fastPointer.next.next;
+            slowPointer = slowPointer.next;
+        }
+        return slowPointer;
     }
 
     public static void main(String[] args) {
