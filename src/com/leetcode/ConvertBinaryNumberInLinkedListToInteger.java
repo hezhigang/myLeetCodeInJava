@@ -12,13 +12,14 @@ package com.leetcode;
 public class ConvertBinaryNumberInLinkedListToInteger {
 
     /**
+     * Binary Representation
      * 102 / 102 test cases passed
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for Convert Binary Number in a Linked List to Integer.
      * Memory Usage: 36.4 MB, less than 10.97% of Java online submissions for Convert Binary Number in a Linked List to Integer.
      * @param head
      * @return
      */
-    public static int getDecimalValue(ListNode head) {
+    public static int getDecimalValue_my(ListNode head) {
         int n = 0;
         ListNode node = head;
         while (node != null) {
@@ -33,6 +34,26 @@ public class ConvertBinaryNumberInLinkedListToInteger {
         }
         x += node.val;
         return x;
+    }
+
+    /**
+     * Bit Manipulation
+     * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/solution/
+     * 102 / 102 test cases passed.
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Convert Binary Number in a Linked List to Integer.
+     * Memory Usage: 36.4 MB, less than 11.21% of Java online submissions for Convert Binary Number in a Linked List to Integer.
+     * @param head
+     * @return
+     */
+    public static int getDecimalValue(ListNode head) {
+        if (head == null)
+            return 0;
+        int d = head.val;
+        while (head.next != null) {
+            d = (d << 1) | head.next.val;
+            head = head.next;
+        }
+        return d;
     }
 
     public static void main(String[] args) {
