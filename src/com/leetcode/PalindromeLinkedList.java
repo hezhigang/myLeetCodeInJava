@@ -22,7 +22,7 @@ public class PalindromeLinkedList {
      * @param head
      * @return
      */
-    public static boolean isPalindrome(ListNode head) {
+    public static boolean isPalindrome_v1(ListNode head) {
         List<ListNode> list = new ArrayList<ListNode>();
         while (head != null) {
             list.add(head);
@@ -33,6 +33,45 @@ public class PalindromeLinkedList {
             if (list.get(i).val != list.get(n - 1 - i).val)
                 return false;
         }
+        return true;
+    }
+
+    /**
+     * Recursion
+     * 26 / 26 test cases passed.
+     * Runtime: 1418 ms, faster than 5.02% of Java online submissions for Palindrome Linked List.
+     * Memory Usage: 42.7 MB, less than 5.11% of Java online submissions for Palindrome Linked List.
+     * @param head
+     * @return
+     */
+    public static boolean isPalindrome_recur(ListNode head) {
+        if (head == null)
+            return true;
+        if (head.next == null)
+            return true;
+        ListNode secondLast = head;
+        while (secondLast.next.next != null) {
+            secondLast = secondLast.next;
+        }
+        if (head.val == secondLast.next.val) {
+            secondLast.next = null;
+            return isPalindrome(head.next);
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     *
+     * @param head
+     * @return
+     */
+    public static boolean isPalindrome(ListNode head) {
+        if (head == null)
+            return true;
+        if (head.next == null)
+            return true;
+
         return true;
     }
 
