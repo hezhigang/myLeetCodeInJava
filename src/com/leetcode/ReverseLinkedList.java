@@ -16,7 +16,7 @@ public class ReverseLinkedList {
 	 * @param head
 	 * @return
 	 */
-    public static ListNode reverseList(ListNode head) {
+    public static ListNode reverseList_iteratively(ListNode head) {
     	ListNode prev = null;
     	ListNode current = head;
     	ListNode next = null;
@@ -83,6 +83,57 @@ public class ReverseLinkedList {
     }
 
 	/**
+	 * Recursive
+	 * https://www.programcreek.com/2014/05/leetcode-reverse-linked-list-java/
+	 * 27 / 27 test cases passed.
+	 * Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.
+	 * Memory Usage: 39.2 MB, less than 22.97% of Java online submissions for Reverse Linked List.
+	 * @param head
+	 * @return
+	 */
+	public static ListNode reverseList_recur_1(ListNode head) {
+		if (head == null || head.next == null)
+			return head;
+
+		//get second node
+		ListNode second = head.next;
+		//set first's next to be null
+		head.next = null;
+
+		ListNode rest = reverseList_recur_1(second);
+		second.next = head;
+
+		return rest;
+	}
+
+	/**
+	 * Iterative
+	 * https://www.programcreek.com/2014/05/leetcode-reverse-linked-list-java/
+	 * 27 / 27 test cases passed.
+	 * Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.
+	 * Memory Usage: 39 MB, less than 22.36% of Java online submissions for Reverse Linked List.
+	 * @param head
+	 * @return
+	 */
+	public static ListNode reverseList(ListNode head) {
+		if (head == null || head.next == null)
+			return head;
+
+		ListNode p1 = head;
+		ListNode p2 = p1.next;
+
+		head.next = null;
+		while (p1 != null && p2 != null) {
+			ListNode t = p2.next;
+			p2.next = p1;
+			p1 = p2;
+			p2 = t;
+		}
+
+		return p1;
+	}
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -99,14 +150,14 @@ public class ReverseLinkedList {
 		
 		printLinkedList(head);
 		
-//		ListNode reversedHead = reverseList(head);
-//		printLinkedList(reversedHead);
+		ListNode reversedHead = reverseList(head);
+		printLinkedList(reversedHead);
 		
 //		ListNode head2 = reverseList2(head);
 //		printLinkedList(head2);
 		
 //		ListNode head3 = reverseUtil(head,null);
-		ListNode head3 = reverseList3(head);
-		printLinkedList(head3);
+//		ListNode head3 = reverseList3(head);
+//		printLinkedList(head3);
 	}
 }
