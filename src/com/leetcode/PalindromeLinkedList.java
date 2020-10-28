@@ -62,16 +62,48 @@ public class PalindromeLinkedList {
     }
 
     /**
-     *
+     * Break and reverse second half
+     * https://www.programcreek.com/2014/07/leetcode-palindrome-linked-list-java/
+     * 26 / 26 test cases passed.
+     * Runtime: 1 ms, faster than 95.13% of Java online submissions for Palindrome Linked List.
+     * Memory Usage: 41.7 MB, less than 5.11% of Java online submissions for Palindrome Linked List.
      * @param head
      * @return
      */
     public static boolean isPalindrome(ListNode head) {
-        if (head == null)
-            return true;
-        if (head.next == null)
+        if (head == null || head.next == null)
             return true;
 
+        //find list center
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        ListNode secondHead = slow.next;
+        slow.next = null;
+
+        //reverse second part of the list
+        ListNode p1 = secondHead;
+        ListNode p2 = p1.next;
+        while (p1 != null && p2 != null) {
+            ListNode temp = p2.next;
+            p2.next = p1;
+            p1 = p2;
+            p2 = temp;
+        }
+        secondHead.next = null;
+
+        //compare two sublists now
+        ListNode p = (p2 == null ? p1 : p2);
+        ListNode q = head;
+        while (p != null) {
+            if (p.val != q.val)
+                return false;
+            p = p.next;
+            q = q.next;
+        }
         return true;
     }
 
@@ -80,10 +112,10 @@ public class PalindromeLinkedList {
         ListNode head = new ListNode(1);
         ListNode node2 = new ListNode(2);
         head.next = node2;
-//        ListNode node3 = new ListNode(2);
-//        node2.next = node3;
-//        ListNode node4 = new ListNode(1);
-//        node3.next = node4;
+        ListNode node3 = new ListNode(2);
+        node2.next = node3;
+        ListNode node4 = new ListNode(1);
+        node3.next = node4;
 
         printLinkedList(head);
         boolean b = isPalindrome(head);
