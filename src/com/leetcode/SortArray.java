@@ -1,6 +1,7 @@
 package com.leetcode;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * 912. Sort an Array
@@ -176,7 +177,7 @@ public class SortArray {
      * @author Robert Sedgewick
      * @author Kevin Wayne
      */
-    public static int[] sortArray(int[] nums) {
+    public static int[] sortArray_mergesort_bottom_up(int[] nums) {
         final int N = nums.length;
         int[] aux = new int[N];
         for (int len = 1; len < N; len *= 2) {
@@ -189,9 +190,68 @@ public class SortArray {
         return nums;
     }
 
+    /**
+     * exchange a[i] and a[j]
+     * @author Robert Sedgewick
+     * @author Kevin Wayne
+     */
+    private static void exch(int[] a, int i, int j) {
+        int swap = a[i];
+        a[i] = a[j];
+        a[j] = swap;
+    }
+
+    /**
+     * quicksort the subarray a[lo .. hi] using 3-way partitioning
+     * @param a
+     * @param lo
+     * @param hi
+     * @author Robert Sedgewick
+     * @author Kevin Wayne
+     */
+    private static void sort(int[] a, int lo, int hi) {
+        if (hi <= lo) return;
+        int lt = lo, gt = hi;
+        int v = a[lo];
+        int i = lo + 1;
+        while (i <= gt) {
+            if (a[i] < v) exch(a, lt++, i++);
+            else if (a[i] > v) exch(a, i, gt--);
+            else i++;
+        }
+
+        // a[lo..lt-1] < v = a[lt..gt] < a[gt+1..hi].
+        sort(a, lo, lt - 1);
+        sort(a, gt + 1, hi);
+    }
+
+    /**
+     * quicksort with 3-way partitioning
+     * 11 / 11 test cases passed.
+     * Runtime: 7 ms, faster than 34.98% of Java online submissions for Sort an Array.
+     * Memory Usage: 46.5 MB, less than 12.99% of Java online submissions for Sort an Array.
+     * @param nums
+     * @return
+     * @author Robert Sedgewick
+     * @author Kevin Wayne
+     */
+    public static int[] sortArray(int[] nums) {
+        final int N = nums.length;
+        long seed = System.currentTimeMillis();
+        Random random = new Random(seed);
+        for (int i = 0; i < N; i++) {
+            int r = i + random.nextInt(N - i);     // between i and N-1
+            int temp = nums[i];
+            nums[i] = nums[r];
+            nums[r] = temp;
+        }
+        sort(nums, 0, N - 1);
+        return nums;
+    }
+
     public static void main(String[] args) {
-        int[] nums = {5, 2, 3, 1};
-//        int[] nums = {5, 1, 1, 2, 0, 0};
+//        int[] nums = {5, 2, 3, 1};
+        int[] nums = {5, 1, 1, 2, 0, 0};
         System.out.printf("before sorting as : %s", Arrays.toString(nums) );
         int[] sortedNums = sortArray(nums);
 //        int[] sortedNums = sortArray_quicksort(nums);
