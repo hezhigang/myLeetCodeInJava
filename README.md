@@ -78,6 +78,7 @@ LeetCode exercise
 - 1290 - Convert Binary Number in a Linked List to Integer
 - 141 - Linked List Cycle
 - 234 - Palindrome Linked List
+- 125 - Valid Palindrome
 
 ## Medium
 - 2 - Add Two Numbers
