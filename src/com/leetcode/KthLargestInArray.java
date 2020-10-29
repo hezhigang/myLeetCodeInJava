@@ -7,6 +7,7 @@ package com.leetcode;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
+import java.util.Random;
 
 /**
  * 215. Kth Largest Element in an Array
@@ -98,18 +99,90 @@ public class KthLargestInArray {
 	}
 
 	/**
+	 * http://www.geekviewpoint.com/java/search/quickselect
+	 * @param a
+	 * @param left
+	 * @param right
+	 * @param k
+	 * @return
+	 */
+	private static int quickselect(int[] a, int left, int right, int k) {
+		if (left <= right) {
+			int pivot = partition(a, left, right);
+			if (pivot == k) {
+				return a[k];
+			}
+			if (pivot > k) {
+				return quickselect(a, left, pivot - 1, k);
+			}
+			return quickselect(a, pivot + 1, right, k);
+		}
+		return Integer.MIN_VALUE;
+	}
+
+	/**
+	 * http://www.geekviewpoint.com/java/search/quickselect
+	 * @param a
+	 * @param lo
+	 * @param hi
+	 * @return
+	 */
+	private static int partition(int[] a, int lo, int hi) {
+		int pivot = lo + new Random().nextInt(hi - lo + 1);
+		exch(a, hi, pivot);
+		for (int i = lo; i < hi; i++) {
+			if (a[i] > a[hi]) {
+				exch(a, i, lo);
+				lo++;
+			}
+		}
+		exch(a, lo, hi);
+		return lo;
+	}
+
+	private static void exch(int[] a, int i, int j) {
+		int swap = a[i];
+		a[i] = a[j];
+		a[j] = swap;
+	}
+
+	/**
+	 * 32 / 32 test cases passed.
+	 * Runtime: 1 ms, faster than 98.04% of Java online submissions for Kth Largest Element in an Array.
+	 * Memory Usage: 39.3 MB, less than 11.22% of Java online submissions for Kth Largest Element in an Array.
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int findKthLargest(int[] nums, int k) {
+		return quickselect(nums, 0, nums.length - 1, k - 1);
+	}
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Integer[] nums = {3,2,1,5,6,4};
-		int k = 2;
+//		Integer[] nums = {3,2,1,5,6,4};
+//		int k = 2;
 //		Integer[] nums = {3,2,3,1,2,4,5,5,6};
 //		int k = 4;		
-		System.out.printf("%dth Largest Element in an Array %s is %d", k, Arrays.toString(nums), findKthLargest_jdk(nums,k));
-		System.out.println();
-		System.out.printf("%dth Largest Element in an Array %s is %d", k, Arrays.toString(nums), findKthLargest_minHeap(nums,k));
-		System.out.println();
-		System.out.printf("%dth Largest Element in an Array %s is %d", k, Arrays.toString(nums), findKthLargest(nums,k));		
+//		System.out.printf("%dth Largest Element in an Array %s is %d", k, Arrays.toString(nums), findKthLargest_jdk(nums,k));
+//		System.out.println();
+//		System.out.printf("%dth Largest Element in an Array %s is %d", k, Arrays.toString(nums), findKthLargest_minHeap(nums,k));
+//		System.out.println();
+//		System.out.printf("%dth Largest Element in an Array %s is %d", k, Arrays.toString(nums), findKthLargest(nums,k));
+//		System.out.println();
+
+		int[] nums = {3, 2, 1, 5, 6, 4};
+		int k = 2;
+
+//		int[] nums = {3, 2, 3, 1, 2, 4, 5, 5, 6};
+//		int k = 4;
+
+//		int[] nums = {2, 1};
+//		int k = 1;
+
+		System.out.printf("%dth Largest Element in an Array %s is %d", k, Arrays.toString(nums), findKthLargest(nums,k));
 	}
 
 }
