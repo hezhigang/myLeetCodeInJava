@@ -124,6 +124,7 @@ LeetCode exercise
 - 128 - Longest Consecutive Sequence
 - 793 - Preimage Size of Factorial Zeroes Function
 - 149 - Max Points on a Line
+- 4 - Median of Two Sorted Arrays
 
 -------------------------------------------------------------------------------
 
