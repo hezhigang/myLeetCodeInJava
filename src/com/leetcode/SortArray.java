@@ -1,6 +1,8 @@
 package com.leetcode;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Random;
 
 /**
@@ -235,7 +237,7 @@ public class SortArray {
      * @author Robert Sedgewick
      * @author Kevin Wayne
      */
-    public static int[] sortArray(int[] nums) {
+    public static int[] sortArray_ThreeWay_quicksort(int[] nums) {
         final int N = nums.length;
         long seed = System.currentTimeMillis();
         Random random = new Random(seed);
@@ -249,9 +251,25 @@ public class SortArray {
         return nums;
     }
 
+    /**
+     * heap sort using jdk PriorityQueue
+     * @param nums
+     * @return
+     */
+    public static int[] sortArray(int[] nums) {
+        Queue<Integer> q = new PriorityQueue<Integer>();
+        for (int num : nums) {
+            q.add(num);
+        }
+        int i = 0;
+        while (q.size() > 0)
+            nums[i++] = q.poll();
+        return nums;
+    }
+
     public static void main(String[] args) {
-//        int[] nums = {5, 2, 3, 1};
-        int[] nums = {5, 1, 1, 2, 0, 0};
+        int[] nums = {5, 2, 3, 1};
+//        int[] nums = {5, 1, 1, 2, 0, 0};
         System.out.printf("before sorting as : %s", Arrays.toString(nums) );
         int[] sortedNums = sortArray(nums);
 //        int[] sortedNums = sortArray_quicksort(nums);
