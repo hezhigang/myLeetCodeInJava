@@ -256,7 +256,7 @@ public class SortArray {
      * @param nums
      * @return
      */
-    public static int[] sortArray(int[] nums) {
+    public static int[] sortArray_jdk_PriorityQueue(int[] nums) {
         Queue<Integer> q = new PriorityQueue<Integer>();
         for (int num : nums) {
             q.add(num);
@@ -267,9 +267,82 @@ public class SortArray {
         return nums;
     }
 
+    /**
+     * recursion
+     * https://www.geeksforgeeks.org/heap-sort/
+     * @param pq
+     * @param k
+     * @param n
+     */
+    private static void sink_recur(int[] pq, int k, int n) {
+        int largest = k; // Initialize largest as root
+        int l = 2 * k + 1; // left = 2*i + 1
+        int r = 2 * k + 2; // right = 2*i + 2
+
+        // If left child is larger than root
+        if (l < n && pq[l] > pq[largest])
+            largest = l;
+
+        // If right child is larger than largest so far
+        if (r < n && pq[r] > pq[largest])
+            largest = r;
+
+        // If largest is not root
+        if (largest != k) {
+//            int swap = pq[k];
+//            pq[k] = pq[largest];
+//            pq[largest] = swap;
+            exch(pq, k, largest);
+            // Recursively heapify the affected sub-tree
+            sink_recur(pq, largest, n);
+        }
+    }
+
+    /**
+     * Helper functions to restore the heap invariant.
+     * iterative
+     * @param pq
+     * @param k
+     * @param n
+     * @author Robert Sedgewick
+     * @author Kevin Wayne
+     */
+    private static void sink(int[] pq, int k, int n) {
+        while (2 * k <= (n - 1)) {
+            int j = 2 * k;
+            if (j < (n - 1) && pq[j] < pq[j + 1]) j++;
+            if (!(pq[k] < pq[j])) break;
+            exch(pq, k, j);
+            k = j;
+        }
+    }
+
+    /**
+     * heapsort
+     * @param nums
+     * @return
+     */
+    public static int[] sortArray(int[] nums) {
+        int n = nums.length;
+
+        // heapify phase
+        for (int k = (n - 1) / 2; k >= 0; k--)
+            sink(nums, k, n);
+
+        // sortdown phase
+        for (int k = n - 1; k > 0; k--) {
+            exch(nums, 0, k);
+            sink(nums, 0, k);
+        }
+
+        return nums;
+    }
+
     public static void main(String[] args) {
         int[] nums = {5, 2, 3, 1};
 //        int[] nums = {5, 1, 1, 2, 0, 0};
+//        int[] nums = {5, 2, 6};
+//        int[] nums = {8, 3};
         System.out.printf("before sorting as : %s", Arrays.toString(nums) );
         int[] sortedNums = sortArray(nums);
 //        int[] sortedNums = sortArray_quicksort(nums);
