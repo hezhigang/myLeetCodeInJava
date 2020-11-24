@@ -14,13 +14,14 @@ import java.util.Arrays;
 public class AverageSalaryExcludeMinMax {
 
     /**
+     * linearithmic
      * 43 / 43 test cases passed.
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for Average Salary Excluding the Minimum and Maximum Salary.
      * Memory Usage: 36.7 MB, less than 75.02% of Java online submissions for Average Salary Excluding the Minimum and Maximum Salary.
      * @param salary
      * @return
      */
-    public static double average(int[] salary) {
+    public static double average_v1(int[] salary) {
         final int N = salary.length;
         Arrays.sort(salary);
         double t = salary[1];
@@ -28,6 +29,27 @@ public class AverageSalaryExcludeMinMax {
             t += salary[i];
         }
         return t / (N - 2);
+    }
+
+    /**
+     * linear
+     * 43 / 43 test cases passed.
+     * 0 ms, faster than 100.00% of Java online submissions for Average Salary Excluding the Minimum and Maximum Salary.
+     * 37.1 MB, less than 11.62% of Java online submissions for Average Salary Excluding the Minimum and Maximum Salary.
+     * @param salary
+     * @return
+     */
+    public static double average(int[] salary) {
+        final int N = salary.length;
+        int min = salary[0], max = salary[0];
+        double sum = salary[0];
+        for (int i = 1; i < N; i++) {
+            if (salary[i] < min) min = salary[i];
+            if (salary[i] > max) max = salary[i];
+            sum += salary[i];
+        }
+        sum = sum - max - min;
+        return sum / (N - 2);
     }
 
     public static void main(String[] args) {
