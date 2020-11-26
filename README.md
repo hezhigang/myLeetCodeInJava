@@ -80,6 +80,7 @@ LeetCode exercise
 - 234 - Palindrome Linked List
 - 125 - Valid Palindrome
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
+- 367 - Valid Perfect Square
 
 ## Medium
 - 2 - Add Two Numbers
