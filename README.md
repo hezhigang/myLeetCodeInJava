@@ -116,6 +116,7 @@ LeetCode exercise
 - 48 - Rotate Image
 - 34 - Find First and Last Position of Element in Sorted Array
 - 15 - 3Sum
+- 633 - Sum of Square Numbers
 
 ## Hard
 
