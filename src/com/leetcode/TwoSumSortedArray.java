@@ -36,7 +36,7 @@ public class TwoSumSortedArray {
      * @param target
      * @return
      */
-    public static int[] twoSum(int[] numbers, int target) {
+    public static int[] twoSum_binaraysearch(int[] numbers, int target) {
         final int N = numbers.length;
         int[] idxArr = {0, 0};
         for (int index1 = 0; index1 < N / 2 + 1; index1++) {
@@ -77,6 +77,29 @@ public class TwoSumSortedArray {
                 }
             }
         return idxArr;
+    }
+
+    /**
+     * two pointer
+     * 17 / 17 test cases passed.
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Two Sum II - Input array is sorted.
+     * Memory Usage: 39.4 MB, less than 33.74% of Java online submissions for Two Sum II - Input array is sorted.
+     * @param numbers
+     * @param target
+     * @return
+     */
+    public static int[] twoSum(int[] numbers, int target) {
+        final int N = numbers.length;
+        for (int lo = 0, hi = N - 1; lo < hi; ) {
+            if (numbers[lo] + numbers[hi] > target)
+                hi--;
+            else if (numbers[lo] + numbers[hi] < target) {
+                lo++;
+            } else {
+                return new int[]{lo + 1, hi + 1};
+            }
+        }
+        return new int[]{0, 0};
     }
 
     public static void main(String[] args) {
