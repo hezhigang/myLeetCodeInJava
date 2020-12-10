@@ -81,6 +81,7 @@ LeetCode exercise
 - 125 - Valid Palindrome
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
 - 367 - Valid Perfect Square
+- 167 - Two Sum II - Input array is sorted
 
 ## Medium
 - 2 - Add Two Numbers
