@@ -82,6 +82,7 @@ LeetCode exercise
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
 - 367 - Valid Perfect Square
 - 167 - Two Sum II - Input array is sorted
+- 1360 - Number of Days Between Two Dates
 
 ## Medium
 - 2 - Add Two Numbers
