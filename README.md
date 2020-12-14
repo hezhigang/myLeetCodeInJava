@@ -84,6 +84,7 @@ LeetCode exercise
 - 167 - Two Sum II - Input array is sorted
 - 1360 - Number of Days Between Two Dates
 - 1137 - N-th Tribonacci Number
+- 976 - Largest Perimeter Triangle
 
 ## Medium
 - 2 - Add Two Numbers
