@@ -85,6 +85,7 @@ LeetCode exercise
 - 1360 - Number of Days Between Two Dates
 - 1137 - N-th Tribonacci Number
 - 976 - Largest Perimeter Triangle
+- 136 - Single Number
 
 ## Medium
 - 2 - Add Two Numbers
