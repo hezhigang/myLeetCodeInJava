@@ -86,6 +86,7 @@ LeetCode exercise
 - 1137 - N-th Tribonacci Number
 - 976 - Largest Perimeter Triangle
 - 136 - Single Number
+- 268 - Missing Number
 
 ## Medium
 - 2 - Add Two Numbers
