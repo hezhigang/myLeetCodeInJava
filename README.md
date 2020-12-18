@@ -87,6 +87,7 @@ LeetCode exercise
 - 976 - Largest Perimeter Triangle
 - 136 - Single Number
 - 268 - Missing Number
+- 703 - Kth Largest Element in a Stream
 
 ## Medium
 - 2 - Add Two Numbers
