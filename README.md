@@ -124,6 +124,7 @@ LeetCode exercise
 - 34 - Find First and Last Position of Element in Sorted Array
 - 15 - 3Sum
 - 633 - Sum of Square Numbers
+- 1143 - Longest Common Subsequence
 
 ## Hard
 
