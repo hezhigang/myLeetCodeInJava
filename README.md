@@ -126,6 +126,7 @@ LeetCode exercise
 - 15 - 3Sum
 - 633 - Sum of Square Numbers
 - 1143 - Longest Common Subsequence
+- 137 - Single Number II
 
 ## Hard
 
