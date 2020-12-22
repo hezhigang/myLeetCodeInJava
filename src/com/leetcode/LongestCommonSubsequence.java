@@ -5,6 +5,9 @@ time: 11:00 AM
 */
 package com.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 1143. Longest Common Subsequence
  * https://leetcode.com/problems/longest-common-subsequence/
@@ -12,13 +15,13 @@ package com.leetcode;
 public class LongestCommonSubsequence {
 
     /**
+     * bottom-up approach
      * Longest common subsequence problem
      * Computing the length of the LCS
      * https://en.wikipedia.org/wiki/Longest_common_subsequence_problem
      * 43 / 43 test cases passed.
      * Runtime: 18 ms, faster than 17.54% of Java online submissions for Longest Common Subsequence.
      * Memory Usage: 42.8 MB, less than 51.59% of Java online submissions for Longest Common Subsequence.
-     *
      * @param text1
      * @param text2
      * @return
@@ -139,6 +142,59 @@ public class LongestCommonSubsequence {
     public static int longestCommonSubsequence(String text1, String text2) {
         final int LEN1 = text1.length(), LEN2 = text2.length();
         return huntSzymanski_lcs(text1.toCharArray(), text2.toCharArray(), LEN1, LEN2);
+    }
+
+    /**
+     * top-down approach
+     * momoized version
+     * https://www.techiedelight.com/longest-common-subsequence/
+     * Function to find length of Longest Common Subsequence of substring X[0..m-1] and Y[0..n-1]
+     * @param X
+     * @param Y
+     * @param m
+     * @param n
+     * @param lookup
+     * @return
+     */
+    private static int lcsLength(String X, String Y, int m, int n, Map<String, Integer> lookup) {
+        // return if we have reached the end of either string
+        if (m == 0 || n == 0)
+            return 0;
+
+        // construct an unique map key from dynamic elements of the input
+        String key = m + "|" + n;
+
+        // if sub-problem is seen for the first time, solve it and
+        // store its result in a map
+        if (!lookup.containsKey(key)) {
+            // if last character of X and Y matches
+            if (X.charAt(m - 1) == Y.charAt(n - 1)) {
+                lookup.put(key, lcsLength(X, Y, m - 1, n - 1, lookup) + 1);
+
+            } else {
+                // else if last character of X and Y don't match
+                lookup.put(key, Integer.max(lcsLength(X, Y, m, n - 1, lookup), lcsLength(X, Y, m - 1, n, lookup)));
+            }
+        }
+
+        // return the subproblem solution from the map
+        return lookup.get(key);
+    }
+
+    /**
+     * top-down approach
+     * momoized version
+     * 43 / 43 test cases passed.
+     * Runtime: 295 ms, faster than 5.04% of Java online submissions for Longest Common Subsequence.
+     * Memory Usage: 167 MB, less than 5.04% of Java online submissions for Longest Common Subsequence.
+     * @param text1
+     * @param text2
+     * @return
+     */
+    public static int longestCommonSubsequence_momoized(String text1, String text2) {
+        final int LEN1 = text1.length(), LEN2 = text2.length();
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        return lcsLength(text1, text2, LEN1, LEN2, map);
     }
 
     public static void main(String[] args) {
