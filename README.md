@@ -88,6 +88,7 @@ LeetCode exercise
 - 136 - Single Number
 - 268 - Missing Number
 - 703 - Kth Largest Element in a Stream
+- 27 - Remove Element
 
 ## Medium
 - 2 - Add Two Numbers
