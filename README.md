@@ -89,6 +89,7 @@ LeetCode exercise
 - 268 - Missing Number
 - 703 - Kth Largest Element in a Stream
 - 27 - Remove Element
+- 674 - Longest Continuous Increasing Subsequence
 
 ## Medium
 - 2 - Add Two Numbers
@@ -185,5 +186,5 @@ LeetCode exercise
 ----------------------------------------------------------
 
 <a href="https://www.jetbrains.com/?from=LeetCode+exercise">
-<img src="./jetbrains.png" style="width:256px!important; height:256px!important; border:0!important; border-radius: 16px!important;" title="JetBrains" alt="JetBrains">
+<img src="./jetbrains.png" width="256px" height="256px" style="border:0!important; border-radius: 16px!important;" title="JetBrains" alt="JetBrains">
 </a>
