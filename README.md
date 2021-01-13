@@ -129,6 +129,7 @@ LeetCode exercise
 - 1143 - Longest Common Subsequence
 - 137 - Single Number II
 - 260 - Single Number III
+- 1492 - The kth Factor of n
 
 ## Hard
 
