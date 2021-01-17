@@ -23,7 +23,7 @@ public class NaturalNumberKthFactor {
      * @param k
      * @return
      */
-    public static int kthFactor(int n, int k) {
+    public static int kthFactor_brute_force(int n, int k) {
         List<Integer> list = new ArrayList<Integer>();
         for (int i = 1; i <= n; i++) {
             if (n % i == 0)
@@ -33,6 +33,26 @@ public class NaturalNumberKthFactor {
             return -1;
         else
             return list.get(k - 1);
+    }
+
+    /**
+     * https://leetcode.com/problems/the-kth-factor-of-n/discuss/993800/Java-100-Fast-or-Easy-Solution
+     * 207 / 207 test cases passed.
+     * Runtime: 1 ms, faster than 43.12% of Java online submissions for The kth Factor of n.
+     * Memory Usage: 35.5 MB, less than 90.14% of Java online submissions for The kth Factor of n.
+     * @param n
+     * @param k
+     * @return
+     */
+    public static int kthFactor(int n, int k) {
+        int count = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0)
+                count++;
+            if (count == k)
+                return i;
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
