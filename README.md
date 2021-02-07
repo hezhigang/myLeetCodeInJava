@@ -90,6 +90,7 @@ LeetCode exercise
 - 703 - Kth Largest Element in a Stream
 - 27 - Remove Element
 - 674 - Longest Continuous Increasing Subsequence
+- 1275 - Find Winner on a Tic Tac Toe Game
 
 ## Medium
 - 2 - Add Two Numbers
@@ -130,10 +131,10 @@ LeetCode exercise
 - 137 - Single Number II
 - 260 - Single Number III
 - 1492 - The kth Factor of n
+- 146 - LRU Cache
 
 ## Hard
 
-- 146 - LRU Cache
 - 224 - Basic Calculator
 - 145 - Binary Tree Postorder Traversal
 - 815 - Bus Routes
