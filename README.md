@@ -116,6 +116,7 @@ LeetCode exercise
 - 21 - Merge Two Sorted Lists
 - 98 - Validate Binary Search Tree
 - 1137 - N-th Tribonacci Number
+- 104 - Maximum Depth of Binary Tree
 
 ### Two Pointers
 - 3 - Longest Substring Without Repeating Characters
@@ -210,6 +211,7 @@ LeetCode exercise
 - 106 - Construct Binary Tree from Inorder and Postorder Traversal
 - 144 - Binary Tree Preorder Traversal
 - 145 - Binary Tree Postorder Traversal
+- 104 - Maximum Depth of Binary Tree
 
 ### Depth-first Search
 - 98 - Validate Binary Search Tree
@@ -222,6 +224,7 @@ LeetCode exercise
 - 542 - 01 Matrix
 - 547 - Number of Provinces
 - 690 - Employee Importance
+- 104 - Maximum Depth of Binary Tree
 
 ### Breadth-first Search
 - 102 - Binary Tree Level Order Traversal
@@ -379,6 +382,7 @@ LeetCode exercise
 - 27 - Remove Element
 - 674 - Longest Continuous Increasing Subsequence
 - 1275 - Find Winner on a Tic Tac Toe Game
+- 104 - Maximum Depth of Binary Tree
 
 ### Medium
 - 2 - Add Two Numbers
