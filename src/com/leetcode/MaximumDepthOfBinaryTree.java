@@ -22,7 +22,7 @@ public class MaximumDepthOfBinaryTree {
      * @return
      */
     public static int maxDepth(TreeNode root) {
-        return dfs(root, 0);
+        return recur(root, 0);
     }
 
     /**
@@ -31,6 +31,13 @@ public class MaximumDepthOfBinaryTree {
      * @param h
      * @return
      */
+    private static int recur(TreeNode node, int h) {
+        if (node != null)
+            return Math.max(recur(node.left, h + 1), recur(node.right, h + 1));
+        else
+            return h;
+    }
+
     private static int dfs(TreeNode node, int h) {
         if (node != null)
             return Math.max(dfs(node.left, h + 1), dfs(node.right, h + 1));
