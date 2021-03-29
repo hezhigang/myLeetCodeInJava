@@ -23,6 +23,7 @@ public class Foo3 {
     		synchronized(mutex) {
     			if (counter == 1) {
     				printFirst.run();
+					System.out.print("first");
     				++counter;
     				loop = false;
     			}
@@ -36,6 +37,7 @@ public class Foo3 {
     		synchronized(mutex) {
     			if (counter == 2) {
     				printSecond.run();
+					System.out.print("second");
     				++counter;
     				loop = false;
     			}
@@ -49,11 +51,22 @@ public class Foo3 {
     		synchronized(mutex) {
     			if (counter == 3) {
     				printThird.run();
+					System.out.print("third");
     				++counter;
     				loop = false;
     			}
     		}
     	}
     }
+
+	public static void main(String[] args) throws InterruptedException {
+		Runnable a = new Thread();
+		Runnable b = new Thread();
+		Runnable c = new Thread();
+		Foo3 foo = new Foo3();
+		foo.first(c);
+		foo.second(a);
+		foo.third(b);
+	}
 
 }

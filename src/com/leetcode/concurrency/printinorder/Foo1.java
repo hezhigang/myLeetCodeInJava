@@ -48,4 +48,14 @@ public class Foo1 {
     		break;
     	}
     }
+
+	public static void main(String[] args) throws InterruptedException {
+		Runnable a = new Thread();
+		Runnable b = new Thread();
+		Runnable c = new Thread();
+		Foo1 foo = new Foo1();
+		foo.first(c);
+		foo.second(a);
+		foo.third(b);
+	}
 }
