@@ -212,6 +212,7 @@ LeetCode exercise
 - 144 - Binary Tree Preorder Traversal
 - 145 - Binary Tree Postorder Traversal
 - 104 - Maximum Depth of Binary Tree
+- 111 - Minimum Depth of Binary Tree
 
 ### Depth-first Search
 - 98 - Validate Binary Search Tree
@@ -225,6 +226,7 @@ LeetCode exercise
 - 547 - Number of Provinces
 - 690 - Employee Importance
 - 104 - Maximum Depth of Binary Tree
+- 111 - Minimum Depth of Binary Tree
 
 ### Breadth-first Search
 - 102 - Binary Tree Level Order Traversal
@@ -236,6 +238,7 @@ LeetCode exercise
 - 690 - Employee Importance
 - 815 - Bus Routes
 - 994 - Rotting Oranges
+- 111 - Minimum Depth of Binary Tree
 
 ### Union Find
 - 128 - Longest Consecutive Sequence
@@ -383,6 +386,7 @@ LeetCode exercise
 - 674 - Longest Continuous Increasing Subsequence
 - 1275 - Find Winner on a Tic Tac Toe Game
 - 104 - Maximum Depth of Binary Tree
+- 111 - Minimum Depth of Binary Tree
 
 ### Medium
 - 2 - Add Two Numbers
