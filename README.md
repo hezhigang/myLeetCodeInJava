@@ -68,6 +68,7 @@ LeetCode exercise
 - 690 - Employee Importance
 - 706 - Design HashMap
 - 1002 - Find Common Characters
+- 347 - Top K Frequent Elements
 
 ### Linked List
 - 2 - Add Two Numbers
@@ -149,6 +150,7 @@ LeetCode exercise
 - 387 - First Unique Character in a String
 - 709 - To Lower Case
 - 796 - Rotate String
+- 58 - Length of Last Word
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -289,6 +291,7 @@ LeetCode exercise
 ### Heap
 - 215 - Kth Largest Element in an Array
 - 703 - Kth Largest Element in a Stream
+- 347 - Top K Frequent Elements
 
 ### Geometry
 - 1232 - Check If It Is a Straight Line
@@ -387,6 +390,7 @@ LeetCode exercise
 - 1275 - Find Winner on a Tic Tac Toe Game
 - 104 - Maximum Depth of Binary Tree
 - 111 - Minimum Depth of Binary Tree
+- 58 - Length of Last Word
 
 ### Medium
 - 2 - Add Two Numbers
@@ -428,6 +432,8 @@ LeetCode exercise
 - 260 - Single Number III
 - 1492 - The kth Factor of n
 - 146 - LRU Cache
+- 347 - Top K Frequent Elements
+- 334 - Increasing Triplet Subsequence
 
 ### Hard
 - 224 - Basic Calculator
