@@ -111,6 +111,7 @@ LeetCode exercise
 - 1232 - Check If It Is a Straight Line
 - 1360 - Number of Days Between Two Dates
 - 1492 - The kth Factor of n
+- 537 - Complex Number Multiplication
 
 ### Recursion
 - 2 - Add Two Numbers
@@ -151,6 +152,7 @@ LeetCode exercise
 - 709 - To Lower Case
 - 796 - Rotate String
 - 58 - Length of Last Word
+- 537 - Complex Number Multiplication
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -434,6 +436,7 @@ LeetCode exercise
 - 146 - LRU Cache
 - 347 - Top K Frequent Elements
 - 334 - Increasing Triplet Subsequence
+- 537 - Complex Number Multiplication
 
 ### Hard
 - 224 - Basic Calculator
