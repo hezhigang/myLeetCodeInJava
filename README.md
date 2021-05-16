@@ -186,6 +186,7 @@ LeetCode exercise
 - 155 - Min Stack
 - 224 - Basic Calculator
 - 227 - Basic Calculator II
+- 946 - Validate Stack Sequences
 
 ### Dynamic Programming
 - 44 - Wildcard Matching
@@ -437,6 +438,7 @@ LeetCode exercise
 - 347 - Top K Frequent Elements
 - 334 - Increasing Triplet Subsequence
 - 537 - Complex Number Multiplication
+- 946 - Validate Stack Sequences
 
 ### Hard
 - 224 - Basic Calculator
