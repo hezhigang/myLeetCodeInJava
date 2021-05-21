@@ -395,6 +395,7 @@ LeetCode exercise
 - 111 - Minimum Depth of Binary Tree
 - 58 - Length of Last Word
 - 504 - Base 7
+- 389 - Find the Difference
 
 ### Medium
 - 2 - Add Two Numbers
