@@ -394,6 +394,7 @@ LeetCode exercise
 - 104 - Maximum Depth of Binary Tree
 - 111 - Minimum Depth of Binary Tree
 - 58 - Length of Last Word
+- 504 - Base 7
 
 ### Medium
 - 2 - Add Two Numbers
