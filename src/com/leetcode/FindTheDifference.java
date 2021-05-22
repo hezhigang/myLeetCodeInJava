@@ -53,7 +53,7 @@ public class FindTheDifference {
      * @param t
      * @return
      */
-    public static char findTheDifference(String s, String t) {
+    public static char findTheDifference_v2(String s, String t) {
         char c = ' ';
         s += t;
         int x = (int) (s.charAt(0));
@@ -61,6 +61,33 @@ public class FindTheDifference {
             x ^= (int) (s.charAt(i));
         }
         c = (char) x;
+        return c;
+    }
+
+    /**
+     * 54 / 54 test cases passed.
+     * Runtime: 2 ms, faster than 49.97% of Java online submissions for Find the Difference.
+     * Memory Usage: 37.2 MB, less than 88.24% of Java online submissions for Find the Difference.
+     * @param s
+     * @param t
+     * @return
+     */
+    public static char findTheDifference(String s, String t) {
+        char c = ' ';
+        final int N = 26;
+        int[] a = new int[N];
+        for (int i = 0; i < t.length(); i++) {
+            a[t.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            a[s.charAt(i) - 'a']--;
+        }
+        for (int i = 0; i < N; i++) {
+            if (a[i] > 0) {
+                c = (char) (i + 'a');
+                break;
+            }
+        }
         return c;
     }
 
