@@ -51,6 +51,7 @@ LeetCode exercise
 - 1486 - XOR Operation in an Array
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
 - 1572 - Matrix Diagonal Sum
+- 1365 - How Many Numbers Are Smaller Than the Current Number
 
 ### Hash Table
 - 1 - Two Sum
@@ -69,6 +70,8 @@ LeetCode exercise
 - 706 - Design HashMap
 - 1002 - Find Common Characters
 - 347 - Top K Frequent Elements
+- 389 - Find the Difference
+- 1365 - How Many Numbers Are Smaller Than the Current Number
 
 ### Linked List
 - 2 - Add Two Numbers
@@ -267,6 +270,7 @@ LeetCode exercise
 - 1290 - Convert Binary Number in a Linked List to Integer
 - 1342 - Number of Steps to Reduce a Number to Zero
 - 1486 - XOR Operation in an Array
+- 389 - Find the Difference
 
 ### Design
 - 146 - LRU Cache
@@ -398,6 +402,7 @@ LeetCode exercise
 - 389 - Find the Difference
 - 1528 - Shuffle String
 - 771 - Jewels and Stones
+- 1365 - How Many Numbers Are Smaller Than the Current Number
 
 ### Medium
 - 2 - Add Two Numbers
