@@ -396,6 +396,7 @@ LeetCode exercise
 - 58 - Length of Last Word
 - 504 - Base 7
 - 389 - Find the Difference
+- 1528 - Shuffle String
 
 ### Medium
 - 2 - Add Two Numbers
