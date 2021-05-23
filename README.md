@@ -156,6 +156,7 @@ LeetCode exercise
 - 796 - Rotate String
 - 58 - Length of Last Word
 - 537 - Complex Number Multiplication
+- 1662 - Check If Two String Arrays are Equivalent
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -221,6 +222,7 @@ LeetCode exercise
 - 145 - Binary Tree Postorder Traversal
 - 104 - Maximum Depth of Binary Tree
 - 111 - Minimum Depth of Binary Tree
+- 700 - Search in a Binary Search Tree
 
 ### Depth-first Search
 - 98 - Validate Binary Search Tree
@@ -403,6 +405,8 @@ LeetCode exercise
 - 1528 - Shuffle String
 - 771 - Jewels and Stones
 - 1365 - How Many Numbers Are Smaller Than the Current Number
+- 700 - Search in a Binary Search Tree
+- 1662 - Check If Two String Arrays are Equivalent
 
 ### Medium
 - 2 - Add Two Numbers
