@@ -52,6 +52,8 @@ LeetCode exercise
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
 - 1572 - Matrix Diagonal Sum
 - 1365 - How Many Numbers Are Smaller Than the Current Number
+- 448 - Find All Numbers Disappeared in an Array
+- 442 - Find All Duplicates in an Array
 
 ### Hash Table
 - 1 - Two Sum
@@ -407,6 +409,7 @@ LeetCode exercise
 - 1365 - How Many Numbers Are Smaller Than the Current Number
 - 700 - Search in a Binary Search Tree
 - 1662 - Check If Two String Arrays are Equivalent
+- 448 - Find All Numbers Disappeared in an Array
 
 ### Medium
 - 2 - Add Two Numbers
@@ -452,6 +455,7 @@ LeetCode exercise
 - 334 - Increasing Triplet Subsequence
 - 537 - Complex Number Multiplication
 - 946 - Validate Stack Sequences
+- 442 - Find All Duplicates in an Array
 
 ### Hard
 - 224 - Basic Calculator
