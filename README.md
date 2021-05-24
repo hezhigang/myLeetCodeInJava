@@ -225,6 +225,7 @@ LeetCode exercise
 - 104 - Maximum Depth of Binary Tree
 - 111 - Minimum Depth of Binary Tree
 - 700 - Search in a Binary Search Tree
+- 701 - Insert into a Binary Search Tree
 
 ### Depth-first Search
 - 98 - Validate Binary Search Tree
@@ -456,6 +457,7 @@ LeetCode exercise
 - 537 - Complex Number Multiplication
 - 946 - Validate Stack Sequences
 - 442 - Find All Duplicates in an Array
+- 701 - Insert into a Binary Search Tree
 
 ### Hard
 - 224 - Basic Calculator
