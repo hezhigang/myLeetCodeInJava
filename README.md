@@ -54,6 +54,7 @@ LeetCode exercise
 - 1365 - How Many Numbers Are Smaller Than the Current Number
 - 448 - Find All Numbers Disappeared in an Array
 - 442 - Find All Duplicates in an Array
+- 221 - Maximal Square
 
 ### Hash Table
 - 1 - Two Sum
@@ -203,6 +204,7 @@ LeetCode exercise
 - 392 - Is Subsequence
 - 518 - Coin Change 2
 - 1143 - Longest Common Subsequence
+- 221 - Maximal Square
 
 ### BackTracking
 - 44 - Wildcard Matching
@@ -458,6 +460,7 @@ LeetCode exercise
 - 946 - Validate Stack Sequences
 - 442 - Find All Duplicates in an Array
 - 701 - Insert into a Binary Search Tree
+- 221 - Maximal Square
 
 ### Hard
 - 224 - Basic Calculator
