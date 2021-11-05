@@ -61,6 +61,26 @@ public class MaximumRepeatingSubstring {
         return maxCount_prefix > maxCount_suffix ? maxCount_prefix : maxCount_suffix;
     }
 
+    /**
+     * java short easy to understand
+     * https://leetcode.com/problems/maximum-repeating-substring/discuss/1343072/java-short-easy-to-understand
+     * 212 / 212 test cases passed.
+     * Runtime: 1 ms, faster than 82.48% of Java online submissions for Maximum Repeating Substring.
+     * Memory Usage: 37.6 MB, less than 50.74% of Java online submissions for Maximum Repeating Substring.
+     * @param sequence
+     * @param word
+     * @return
+     */
+    public static int maxRepeating_substring_search(String sequence, String word) {
+        int count = 0;
+        String pat = word;
+        while (sequence.contains(pat)) {
+            count++;
+            pat += word;
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
 //        String sequence = "ababc";
 //        String word = "ab";
