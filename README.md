@@ -160,6 +160,7 @@ LeetCode exercise
 - 58 - Length of Last Word
 - 537 - Complex Number Multiplication
 - 1662 - Check If Two String Arrays are Equivalent
+- 1668 - Maximum Repeating Substring
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -413,6 +414,7 @@ LeetCode exercise
 - 700 - Search in a Binary Search Tree
 - 1662 - Check If Two String Arrays are Equivalent
 - 448 - Find All Numbers Disappeared in an Array
+- 1668 - Maximum Repeating Substring
 
 ### Medium
 - 2 - Add Two Numbers
