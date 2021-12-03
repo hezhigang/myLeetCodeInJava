@@ -9,6 +9,9 @@ public class PrimePalindrome {
 
     /**
      * 60 / 60 test cases passed.
+     * Runtime: 1087 ms, faster than 5.56% of Java online submissions for Prime Palindrome.
+     * Memory Usage: 35.5 MB, less than 97.78% of Java online submissions for Prime Palindrome.
+     * 60 / 60 test cases passed.
      * Runtime: 1078 ms, faster than 5.56% of Java online submissions for Prime Palindrome.
      * Memory Usage: 36 MB, less than 61.11% of Java online submissions for Prime Palindrome.
      * Easy to Understand c++ solution
@@ -31,11 +34,7 @@ public class PrimePalindrome {
         else if (n > 3 && n <= 5) return 5;
         else if (n > 5 && n <= 7) return 7;
         else if (n > 7 && n <= 11) return 11;
-        else if (n >= 10000000 && n <= 100030001) return 100030001;
-        else if (n > 100030001 && n <= 1008001) return 1008001;
-        else if (n > 1008001 && n <= 1022201) return 1022201;
-        else if (n > 1022201 && n <= 1028201) return 1028201;
-        else if (n > 1028201 && n <= 1035301) return 1035301;
+        else if (n >= 1e7 && n <= 1e8) return 100030001;
         else {
             int p = 101;
             for (int i = n; i < Integer.MAX_VALUE; i++) {
