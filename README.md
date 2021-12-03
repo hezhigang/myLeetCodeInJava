@@ -118,6 +118,7 @@ LeetCode exercise
 - 1360 - Number of Days Between Two Dates
 - 1492 - The kth Factor of n
 - 537 - Complex Number Multiplication
+- 866 - Prime Palindrome
 
 ### Recursion
 - 2 - Add Two Numbers
@@ -462,7 +463,8 @@ LeetCode exercise
 - 946 - Validate Stack Sequences
 - 442 - Find All Duplicates in an Array
 - 701 - Insert into a Binary Search Tree
-- 221 - Maximal Square
+- 221 - Maximal Square 
+- 866 - Prime Palindrome
 
 ### Hard
 - 224 - Basic Calculator
