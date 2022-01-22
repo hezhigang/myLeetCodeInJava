@@ -162,6 +162,7 @@ LeetCode exercise
 - 537 - Complex Number Multiplication
 - 1662 - Check If Two String Arrays are Equivalent
 - 1668 - Maximum Repeating Substring
+- 8 - String to Integer (atoi)
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -465,6 +466,7 @@ LeetCode exercise
 - 701 - Insert into a Binary Search Tree
 - 221 - Maximal Square 
 - 866 - Prime Palindrome
+- 8 - String to Integer (atoi)
 
 ### Hard
 - 224 - Basic Calculator
