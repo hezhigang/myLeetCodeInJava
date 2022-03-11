@@ -55,6 +55,7 @@ LeetCode exercise
 - 448 - Find All Numbers Disappeared in an Array
 - 442 - Find All Duplicates in an Array
 - 221 - Maximal Square
+- 162 - Find Peak Element
 
 ### Hash Table
 - 1 - Two Sum
@@ -181,6 +182,7 @@ LeetCode exercise
 - 392 - Is Subsequence
 - 704 - Binary Search
 - 793 - Preimage Size of Factorial Zeroes Function
+- 162 - Find Peak Element
 
 ### Divide and Conquer
 - 4 - Median of Two Sorted Arrays
@@ -467,6 +469,7 @@ LeetCode exercise
 - 221 - Maximal Square 
 - 866 - Prime Palindrome
 - 8 - String to Integer (atoi)
+- 162 - Find Peak Element
 
 ### Hard
 - 224 - Basic Calculator
