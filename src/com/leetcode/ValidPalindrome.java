@@ -17,7 +17,7 @@ public class ValidPalindrome {
      * @param s
      * @return
      */
-    public static boolean isPalindrome(String s) {
+    public static boolean isPalindrome_v1(String s) {
         final int N = s.length();
         char c1, c2;
         for (int i = 0, j = N - 1; i < j; ) {
@@ -34,6 +34,22 @@ public class ValidPalindrome {
                 j--;
             }
         }
+        return true;
+    }
+
+    /**
+     * 480 / 480 test cases passed.
+     * Runtime: 883 ms, faster than 12.58% of Java online submissions for Valid Palindrome.
+     * Memory Usage: 47.3 MB, less than 18.43% of Java online submissions for Valid Palindrome.
+     * @param s
+     * @return
+     */
+    public static boolean isPalindrome(String s) {
+        s = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
+        int N = s.length();
+        for (int i = 0; i < N / 2; i++)
+            if (s.charAt(i) != s.charAt(N - 1 - i))
+                return false;
         return true;
     }
 
