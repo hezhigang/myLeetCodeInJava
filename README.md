@@ -497,6 +497,10 @@ LeetCode exercise
 - 596 - Classes More Than 5 Students
 - 620 - Not Boring Movies
 - 627 - Swap Salary
+- 511 - Game Play Analysis I
+- 584 - Find Customer Referee
+- 586 - Customer Placing the Largest Number of Orders
+- 607 - Sales Person
 
 ## Medium
 - 177 - Nth Highest Salary
