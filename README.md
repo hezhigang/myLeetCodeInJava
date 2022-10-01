@@ -164,6 +164,7 @@ LeetCode exercise
 - 1662 - Check If Two String Arrays are Equivalent
 - 1668 - Maximum Repeating Substring
 - 8 - String to Integer (atoi)
+- 2129 - Capitalize the Title
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -419,6 +420,7 @@ LeetCode exercise
 - 1662 - Check If Two String Arrays are Equivalent
 - 448 - Find All Numbers Disappeared in an Array
 - 1668 - Maximum Repeating Substring
+- 2129 - Capitalize the Title
 
 ### Medium
 - 2 - Add Two Numbers
