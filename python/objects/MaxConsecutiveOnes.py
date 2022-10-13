@@ -1,14 +1,5 @@
 class MaxConsecutiveOnes:
 
-    def __init__(self):
-        self.__bitArray = []
-
-    def getBitArray(self):
-        return self.__bitArray
-
-    def setBitArray(self, vals):
-        self.__bitArray = vals
-
     # 485. Max Consecutive Ones
     # https://leetcode.com/problems/max-consecutive-ones/
     # 42 / 42 test cases passed.
