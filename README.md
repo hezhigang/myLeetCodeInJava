@@ -55,7 +55,8 @@ LeetCode exercise
 - 448 - Find All Numbers Disappeared in an Array
 - 442 - Find All Duplicates in an Array
 - 221 - Maximal Square
-- 162 - Find Peak Element
+- 162 - Find Peak Element 
+- 485 - Max Consecutive Ones
 
 ### Hash Table
 - 1 - Two Sum
@@ -421,6 +422,7 @@ LeetCode exercise
 - 448 - Find All Numbers Disappeared in an Array
 - 1668 - Maximum Repeating Substring
 - 2129 - Capitalize the Title
+- 485 - Max Consecutive Ones
 
 ### Medium
 - 2 - Add Two Numbers
