@@ -57,6 +57,8 @@ LeetCode exercise
 - 221 - Maximal Square
 - 162 - Find Peak Element 
 - 485 - Max Consecutive Ones
+- 2418 - Sort the People
+- 2347 - Best Poker Hand
 
 ### Hash Table
 - 1 - Two Sum
@@ -77,6 +79,8 @@ LeetCode exercise
 - 347 - Top K Frequent Elements
 - 389 - Find the Difference
 - 1365 - How Many Numbers Are Smaller Than the Current Number
+- 2418 - Sort the People
+- 2347 - Best Poker Hand
 
 ### Linked List
 - 2 - Add Two Numbers
@@ -166,6 +170,7 @@ LeetCode exercise
 - 1668 - Maximum Repeating Substring
 - 8 - String to Integer (atoi)
 - 2129 - Capitalize the Title
+- 2418 - Sort the People
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -300,6 +305,7 @@ LeetCode exercise
 - 969 - Pancake Sorting
 - 976 - Largest Perimeter Triangle
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
+- 2418 - Sort the People
 
 ### Graph
 - 207 - Course Schedule
@@ -423,6 +429,8 @@ LeetCode exercise
 - 1668 - Maximum Repeating Substring
 - 2129 - Capitalize the Title
 - 485 - Max Consecutive Ones
+- 2418 - Sort the People
+- 2347 - Best Poker Hand
 
 ### Medium
 - 2 - Add Two Numbers
