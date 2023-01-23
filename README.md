@@ -171,6 +171,7 @@ LeetCode exercise
 - 8 - String to Integer (atoi)
 - 2129 - Capitalize the Title
 - 2418 - Sort the People
+- 1507 - Reformat Date
 
 ### Sliding Window
 - 3 - Longest Substring Without Repeating Characters
@@ -431,6 +432,7 @@ LeetCode exercise
 - 485 - Max Consecutive Ones
 - 2418 - Sort the People
 - 2347 - Best Poker Hand
+- 1507 - Reformat Date
 
 ### Medium
 - 2 - Add Two Numbers
