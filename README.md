@@ -95,6 +95,7 @@ LeetCode exercise
 - 237 - Delete Node in a Linked List
 - 876 - Middle of the Linked List
 - 1290 - Convert Binary Number in a Linked List to Integer
+- 147 - Insertion Sort List
 
 ### Math
 - 2 - Add Two Numbers
@@ -307,6 +308,7 @@ LeetCode exercise
 - 976 - Largest Perimeter Triangle
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
 - 2418 - Sort the People
+- 147 - Insertion Sort List
 
 ### Graph
 - 207 - Course Schedule
@@ -484,6 +486,7 @@ LeetCode exercise
 - 866 - Prime Palindrome
 - 8 - String to Integer (atoi)
 - 162 - Find Peak Element
+- 147 - Insertion Sort List
 
 ### Hard
 - 224 - Basic Calculator
