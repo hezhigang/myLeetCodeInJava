@@ -59,6 +59,7 @@ LeetCode exercise
 - 485 - Max Consecutive Ones
 - 2418 - Sort the People
 - 2347 - Best Poker Hand
+- 373 - Find K Pairs with Smallest Sums
 
 ### Hash Table
 - 1 - Two Sum
@@ -96,6 +97,7 @@ LeetCode exercise
 - 876 - Middle of the Linked List
 - 1290 - Convert Binary Number in a Linked List to Integer
 - 147 - Insertion Sort List
+- 148 - Sort List
 
 ### Math
 - 2 - Add Two Numbers
@@ -150,6 +152,7 @@ LeetCode exercise
 - 344 - Reverse String
 - 349 - Intersection of Two Arrays
 - 977 - Squares of a Sorted Array
+- 148 - Sort List
 
 ### String
 - 3 - Longest Substring Without Repeating Characters
@@ -198,6 +201,7 @@ LeetCode exercise
 - 53 - Maximum Subarray
 - 169 - Majority Element
 - 215 - Kth Largest Element in an Array
+- 148 - Sort List
 
 ### Stack
 - 20 - Valid Parentheses
@@ -309,6 +313,7 @@ LeetCode exercise
 - 1491 - Average Salary Excluding the Minimum and Maximum Salary
 - 2418 - Sort the People
 - 147 - Insertion Sort List
+- 148 - Sort List
 
 ### Graph
 - 207 - Course Schedule
@@ -322,6 +327,7 @@ LeetCode exercise
 - 215 - Kth Largest Element in an Array
 - 703 - Kth Largest Element in a Stream
 - 347 - Top K Frequent Elements
+- 373 - Find K Pairs with Smallest Sums
 
 ### Geometry
 - 1232 - Check If It Is a Straight Line
@@ -487,6 +493,8 @@ LeetCode exercise
 - 8 - String to Integer (atoi)
 - 162 - Find Peak Element
 - 147 - Insertion Sort List
+- 373 - Find K Pairs with Smallest Sums
+- 148 - Sort List
 
 ### Hard
 - 224 - Basic Calculator
