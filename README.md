@@ -302,6 +302,7 @@ LeetCode exercise
 - 155 - Min Stack
 - 703 - Kth Largest Element in a Stream
 - 706 - Design HashMap
+- 208 - Implement Trie (Prefix Tree)
 
 ### Sort
 - 164 - Maximum Gap
@@ -331,6 +332,9 @@ LeetCode exercise
 
 ### Geometry
 - 1232 - Check If It Is a Straight Line
+
+### Trie
+- 208 - Implement Trie (Prefix Tree)
 
 ------------------------------
 
@@ -495,6 +499,7 @@ LeetCode exercise
 - 147 - Insertion Sort List
 - 373 - Find K Pairs with Smallest Sums
 - 148 - Sort List
+- 208 - Implement Trie (Prefix Tree)
 
 ### Hard
 - 224 - Basic Calculator
