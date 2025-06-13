@@ -82,6 +82,7 @@ LeetCode exercise
 - 1365 - How Many Numbers Are Smaller Than the Current Number
 - 2418 - Sort the People
 - 2347 - Best Poker Hand
+- 451 - Sort Characters By Frequency
 
 ### Linked List
 - 2 - Add Two Numbers
@@ -502,6 +503,7 @@ LeetCode exercise
 - 148 - Sort List
 - 208 - Implement Trie (Prefix Tree)
 - 692 - Top K Frequent Words
+- 451 - Sort Characters By Frequency
 
 ### Hard
 - 224 - Basic Calculator
